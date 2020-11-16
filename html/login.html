@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+            initial-scale=1.0">
+    <title>AD Shop</title>
+    <link rel="shortcut icon" href="images/mouse.png">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <!-- style -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="nav">
+        <div class="nav-center">
+            <!-- ! phone -->
+            <div class="nav-header">
+                <div class="cont">
+                    <img src="images/mouse.png" class="nav-logo" alt="" height="50" />
+                    <div class="quote">
+                        <h1>Abdou <span>Shop</span></h1>
+                        <h4>Taste Quality</h4>
+                    </div>
+                </div>
+                <button class="sign-in"><a href="signin.html" id="sign">sign
+                        up</a></button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="final-result">
+        <div class="content">
+            <div class="final__register-wrapper">
+                <div class="final__register-block">
+                    <h1 class="">Login to your account</h1>
+                    <p>Quickly &amp; easily login to your
+                        account using
+                        the form below.</p>
+                    <form action="/index.html">
+                        <input type="email" placeholder="Enter your email" />
+                        <input type="password" placeholder="Enter your password" />
+                        <input type="submit" value="Log in" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="sign-up-hint">
+        <h2>You can sign up Easely right now</h2>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- my script -->
+    <script>
+        $(document).ready(function () {
+            $(".final__register-block").fadeIn(700);
+            $(".sign-in").hover(function () {
+                $(".sign-up-hint").toggleClass("show-hint");
+            });
+        });
+    </script>
+</body>
+
+</html>

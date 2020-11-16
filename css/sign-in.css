@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+    /* dark shades of primary color*/
+    --primary: #071a52;
+    --primary_3: rgba(3, 10, 32, 0.726);
+    --primary_2: rgb(83, 167, 216);
+    --white: #FFF;
+    --clr-black: #222;
+    --ff-primary: "Montserrat", sans-serif;
+    --ff-secondary: "Open Sans", sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.2rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+}
+
+title {
+    padding: 8px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ! NAVBAR */
+
+.nav {
+    z-index: 99;
+    position: sticky;
+    height: 4rem;
+    display: flex;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 7px 7px 10px #47454542;
+}
+
+.nav-center {
+    width: 90vw;
+    max-width: 1170px;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont {
+    display: flex;
+}
+
+.cont .quote {
+    padding-left: 1rem;
+}
+
+.quote h1 {
+    cursor: pointer;
+    color: #112a75;
+}
+
+.cont h1 span {
+    color: rgb(21, 199, 101);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.cont h4 {
+    font-weight: 100;
+    color: rgb(89, 55, 214);
+}
+
+.sign-in::before {
+    position: absolute;
+    content: "»";
+    top: 50%;
+    transform: translateY(-50%);
+    right: 4px;
+    color: rgb(21, 199, 101);
+    font-size: 13pt;
+    font-weight: 700;
+    display: none;
+    padding-right: 6px;
+}
+
+.sign-in {
+    transition: all .6s ease;
+    position: relative;
+    background-color: transparent;
+    padding: 6px 17px;
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+    align-self: center;
+    border: 1.5px solid rgb(21, 199, 101);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.sign-in:hover {
+    padding-right: 35px;
+}
+
+.sign-in:hover::before {
+    display: block;
+}
+
+#sign {
+    color: rgb(21, 199, 101);
+    font-weight: 700;
+    font-size: 13pt;
+}
+
+.section-center-up {
+    width: 100vw;
+    height: 100vh;
+    background: #87c3c7;
+    background-image: url(/site/images/sea.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -4rem;
+    display: grid;
+    align-items: center;
+    place-items: center;
+}
+
+.container-up {
+    background-color: white;
+    width: 100%;
+    max-width: 350px;
+    align-items: center;
+    margin-top: 4rem;
+    padding: 15px 10px;
+    border-radius: 5px;
+    box-shadow: 8px 9px 13px rgba(0, 0, 0, 0.29);
+}
+
+.container-up * {
+    box-sizing: border-box;
+}
+
+.container-up p,
+h1 {
+    color: #999;
+    padding: 8px 15px;
+}
+
+.container-up form input {
+    display: block;
+    align-self: center;
+    width: 90%;
+    padding: 10px;
+    margin: 8px auto;
+    border: 1px solid #c4c4c4;
+    border-bottom-width: 3px;
+    border-radius: 5px;
+    height: 45px;
+    line-height: 1.3;
+}
+
+.container-up form input[type="text"]:focus,
+.container-up form input[type="text"]:active,
+.container-up form input[type="email"]:focus,
+.container-up form input[type="email"]:active,
+.container-up form input[type="tel"]:focus,
+.container-up form input[type="tel"]:active,
+.container-up form input[type="password"]:focus,
+.container-up form input[type="password"]:active {
+    border-color: #999;
+}
+
+.container-up form input[type="submit"] {
+    cursor: pointer;
+    background-color: rgb(21, 199, 101);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+    border: none;
+}
+
+.container-up form input[type="submit"]:active,
+.container-up form input[type="submit"]:hover {
+    background-color: rgb(21, 176, 91);
+    box-shadow: 4px 3px 15px rgba(0, 0, 0, 0.33333);
+}
+
+@media screen and (max-width:1024px) {
+    .cont .quote {
+        display: none;
+    }
+}

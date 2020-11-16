@@ -1,0 +1,15 @@
+{
+  "name": "adshop",
+  "version": "1.0.0",
+  "description": "this package for my project",
+  "main": "home.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "abdou",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "uniq": "^1.0.1"
+  }
+}
