@@ -143,6 +143,14 @@ body {
   padding-right: 3.1rem;
   font-weight: 600;
   letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+  line-height: 23px;
+  max-lines: 1;
 }
 
 .hour-product {
@@ -171,6 +179,7 @@ body {
   margin-top: -5px;
   margin-left: 3.5px;
   font-size: 13px;
+  /* margin-right: 1rem; */
 }
 
 .place-product {
