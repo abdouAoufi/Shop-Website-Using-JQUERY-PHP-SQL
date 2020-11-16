@@ -82,6 +82,7 @@
             });
         }
         let counter = 0;
+
         function display(index, dataSet) {
             if (counter < 10) {
                 let date = (calculateDate(dataSet.hourPost))
@@ -100,7 +101,7 @@
                  <p class="priceState"> [<span>${dataSet.stateSell}</span>]</p>
                </div>
                
-                 <div class="product-price">
+                 <div class="product-td">
                      <p class="hour-product">${date} </p>
                      <p class="place-product">${dataSet.wilaya}  </p>
                  </div>
