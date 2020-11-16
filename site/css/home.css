@@ -149,8 +149,23 @@ body {
   -webkit-line-clamp: 1;
   /* number of lines to show */
   -webkit-box-orient: vertical;
-  line-height: 23px;
   max-lines: 1;
+  position: relative;
+}
+
+.price-product span {
+  color: #090a0a;
+  position: absolute;
+  margin-top: -2px;
+  margin-left: 3.5px;
+  font-size: 13px;
+  /* margin-right: 1rem; */
+}
+
+.state-product {
+  /* font-weight: 500; */
+  color: #0b8457;
+  width: auto;
 }
 
 .hour-product {
@@ -165,21 +180,6 @@ body {
   -webkit-box-orient: vertical;
   line-height: 23px;
   max-lines: 1;
-}
-
-.state-product {
-  /* font-weight: 500; */
-  color: #0b8457;
-  width: auto;
-}
-
-.price-product span {
-  color: #090a0a;
-  position: absolute;
-  margin-top: -5px;
-  margin-left: 3.5px;
-  font-size: 13px;
-  /* margin-right: 1rem; */
 }
 
 .place-product {
