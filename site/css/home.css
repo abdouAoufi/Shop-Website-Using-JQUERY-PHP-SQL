@@ -78,6 +78,7 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
+  box-shadow: 1px 1px 7px rgba(34, 34, 34, 0.249);
 }
 
 .priceState {
