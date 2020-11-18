@@ -68,7 +68,7 @@
 
 
         function displayData(data) {
-            $.each(data, display);
+             $.each(data, display);
             $(".title-product, .img-container ").click(function () {
                 let id = parseInt($(this).children(0).html());
                 displayFull(data[id]);

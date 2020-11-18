@@ -30,7 +30,7 @@
 
 .hamburger i {
     font-size: 30px;
-    color: blueviolet;
+    color: #8a2be2;
     cursor: pointer;
 }
 
@@ -50,4 +50,46 @@
 .info li:hover {
     color: var(--primary-dark);
     text-shadow: 5px 5px 4px #c4c4c4;
+}
+
+
+
+.search-bar {
+    width: 40%;
+    display: flex;
+    border: .3px solid rgba(207, 193, 193, 0.753);
+
+}
+
+#search {
+    width: 88%;
+    padding: 0.6rem 1.1rem;
+    border-width: .3px;
+    border: none;
+    border-radius: 1px;
+    font-size: 1.4rem;
+    font-family: "Lato",
+        sans-serif;
+}
+
+#sub {
+    border: none;
+    padding: 0.8rem;
+
+    border-left: rgba(207, 193, 193, 0.753) 1px solid;
+    width: 12%;
+    font-family: "Lato",
+        sans-serif;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#sub i {
+    margin: auto;
+    font-size: 1.2rem;
+    color: hsla(0, 7%, 30%, 0.705);
+}
+
+#sub:hover {
+    background-color: rgba(34, 34, 34, 0.174);
 }
