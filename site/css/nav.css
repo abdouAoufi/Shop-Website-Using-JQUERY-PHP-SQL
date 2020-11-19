@@ -55,20 +55,19 @@
 
 
 .search-bar {
-    width: 550px;
+    width: 40%;
     display: flex;
     border: .3px solid rgba(207, 193, 193, 0.753);
     border-radius: 2px;
 }
 
 #search {
-    width: 85%;
-    padding: 0.6rem 1.1rem;
+    width: 80%;
+    padding: 0.4rem 1.1rem;
     border-width: .3px;
     border: none;
     font-size: 1.4rem;
-    font-family: "Lato",
-        sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 #sub {
@@ -76,10 +75,11 @@
     display: grid;
     place-items: center;
     border-left: rgba(207, 193, 193, 0.753) 1px solid;
-    width: 15%;
+    width: 20%;
     font-family: "Lato", sans-serif;
     background-color: transparent;
     cursor: pointer;
+    padding: 0 .4rem;
 }
 
 #sub i {
