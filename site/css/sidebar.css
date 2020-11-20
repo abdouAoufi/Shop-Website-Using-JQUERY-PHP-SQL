@@ -8,7 +8,7 @@
     transition: all 0.5s ease-in-out;
     box-shadow: var(--shadow);
     opacity: 0;
-    display: block;
+    visibility: hidden;
 }
 
 .inner {
@@ -114,45 +114,4 @@
 .list-element:hover,
 .list-element:active {
     background-color: rgba(238, 238, 238, 0.705);
-}
-
-
-
-
-@media screen and (max-width: 640px) {
-    .sidebar {
-        z-index: 99;
-        position: fixed;
-        top: 4rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 85%;
-        height: auto;
-        display: grid;
-        place-items: center;
-        background-color: #fff;
-        transition: all 0.5s ease-in-out;
-        box-shadow: var(--shadow);
-        margin-top: 0.5rem;
-        border-radius: 5px;
-        opacity: 0;
-    }
-
-    .profile {
-        border-radius: 5px;
-    }
-
-    .categories a {
-        padding: 0.45rem 4rem;
-    }
-
-    .inner-container-aside {
-        padding: 1rem 0;
-    }
-
-    .inner {
-        display: none;
-    }
-
-
 }
