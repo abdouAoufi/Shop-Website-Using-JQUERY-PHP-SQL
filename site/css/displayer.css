@@ -1,16 +1,30 @@
 .displayer {
-    font-family: "Lato", sans-serif;
-    position: fixed;
-    top: 4rem;
-    /* padding: 80px 40px; */
     display: grid;
     place-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    font-family: "Lato", sans-serif;
+}
+
+/*
+! POSITION
+! DISPLAY
+! ZINDEX
+! MARGIN
+! PADDING 
+! BORDER
+! SHADOW
+! FONT FAMILY
+! FONT SIZE 
+! BACKGROUND
+*/
+
+.full-page {
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
-
-    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
 }
 
 .display-content * {
@@ -19,22 +33,21 @@
 }
 
 .display-content {
-    z-index: 7;
-    border-radius: 5px;
-    /* margin-top: 4rem; */
-    background: #fff;
+    position: relative;
     width: 80%;
     height: 80%;
     display: flex;
+    z-index: 7;
+    border-radius: 5px;
     box-shadow: var(--shadow);
-    position: relative;
+    background: #fff;
 }
 
 .product-to-diplay {
+    position: relative;
     width: 40%;
     padding: 0.8rem;
     color: #2d2f3a;
-    position: relative;
 }
 
 .sp {
@@ -46,9 +59,6 @@
     letter-spacing: 1.6px;
 }
 
-/* .dis-price span {
-
-} */
 
 .dis-category {
     font-weight: 400;
@@ -61,14 +71,13 @@
 
 .dis-details p {
     position: relative;
+    display: -webkit-box;
+    font-size: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
     -webkit-line-clamp: 4;
     max-lines: 3;
-    /* number of lines to show */
     -webkit-box-orient: vertical;
-    font-size: 16px;
 }
 
 .dis-details h5 {
@@ -82,16 +91,15 @@
 }
 
 .dis-profile {
-    /* position: absolute; */
     width: 100%;
     height: auto;
-    box-shadow: var(--shadow);
     max-height: 400px;
     margin: 1rem auto;
-    background: #eee;
-    border-radius: 5px;
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    background: #eee;
     z-index: 5;
 }
 
@@ -116,9 +124,9 @@
 .inner-nav button {
     height: 30px;
     border-color: transparent;
-    background: rgb(218, 211, 211);
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
+    background: rgb(218, 211, 211);
 }
 
 .inner-nav i {
@@ -126,8 +134,8 @@
 }
 
 .dis-basic-info {
-    margin: 0.8rem;
     display: block;
+    margin: 0.8rem;
 }
 
 .contact {
@@ -138,10 +146,10 @@
 }
 
 .dis-see {
-    color: #0b8457;
     display: none;
     cursor: pointer;
     text-decoration: underline;
+    color: #0b8457;
 }
 
 .message {
@@ -155,9 +163,9 @@
 .contact button {
     height: 30px;
     border-color: transparent;
-    background: rgb(218, 211, 211);
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
+    background: rgb(218, 211, 211);
 }
 
 .contact button:hover {
@@ -170,39 +178,38 @@
 }
 
 .pictures-container {
+    position: relative;
     width: 60%;
     height: 100%;
     display: grid;
     place-items: center;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    position: relative;
     padding: 1rem;
     border: border;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .image-show {
-    cursor: pointer;
-    /* width: 100%; */
     height: 90%;
     max-width: 420px;
+    cursor: pointer;
 }
 
 .next-image {
-    opacity: 0.5;
     position: absolute;
     top: 50%;
     right: 1rem;
+    opacity: 0.5;
 }
 
 .change-image {
-    padding: 0.4rem 1.4rem;
-    font-size: 1.4rem;
-    background-color: #9195a856;
-    color: #0e153a;
-    cursor: pointer;
-    border-radius: 3px;
     transform: translateY(-50%);
+    padding: 0.4rem 1.4rem;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #0e153a;
+    background-color: #9195a856;
 }
 
 .change-image:hover {
@@ -210,22 +217,21 @@
 }
 
 .pre-image {
-    opacity: 0.5;
     position: absolute;
     top: 50%;
     left: 1rem;
+    opacity: 0.5;
 }
 
 .closee {
     position: absolute;
     right: 15px;
     top: 5px;
-    color: #0e153a;
-    opacity: 0.5;
-    font-size: 2.2rem;
-    cursor: pointer;
-    transition: 0.5s;
     z-index: 3;
+    opacity: 0.5;
+    font-size: 2.0rem;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .closee:hover,

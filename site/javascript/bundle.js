@@ -74,6 +74,7 @@
                 displayFull(data[id]);
             })
 
+
             $(".dropdown").click(function name(params) {
                 $(this)
                     .children(2)
@@ -191,6 +192,11 @@
                 }
             });
 
+            $(".displayer").not(document.getElementById("pro")).click(function () {
+                hideFull();
+            });
+
+
             $('.dis-see').click(function () {
                 showImage();
             });
@@ -219,15 +225,15 @@
 
         }
 
+
         function hideFull() {
             $(".displayer").fadeOut(500);
-            $(".nav").show();
         }
 
         function appendHtml(data) {
             $('body').append(
-                ` <section class="displayer">
-                   <div class="display-content">
+                ` <section class="displayer full-page">
+                   <div class="display-content" id="pro">
                        <div class="closee"><i class="fas fa-times"></i></div>
                        <article class="product-to-diplay">
                            <h2 class="dis-title sp">${data.title} </h1>
@@ -245,11 +251,7 @@
                                    <h5>Details : </h5>
                                    <p>${data.descreption} </p>
                                </div>
-
-                               <h3 class="dis-see sp">See pictures</h3>
-
-
-
+                               <h3 class="dis-see sp">See Photos</h3>
                                <h5 class="seller-info">Information Seller :
                                </h5>
                                <div class="dis-profile">
