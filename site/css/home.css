@@ -1,5 +1,8 @@
 @import "nav.css";
 @import "displayer.css";
+@import "sidebar.css";
+@import "globale.css";
+@import "animation.css";
 
 :root {
   --primary: rgb(21, 199, 101);
@@ -7,6 +10,7 @@
   --radius: 5px;
   --border: 1px solid black;
   --shadow: 3px 2px 6px rgba(0, 0, 0, 0.3);
+  --darkBlue: hsl(233, 26%, 24%);
 }
 
 *,
@@ -76,7 +80,7 @@ body {
   width: 100%;
   overflow: hidden;
   position: relative;
-  box-shadow: 1px 1px 7px rgba(34, 34, 34, 0.249);
+  /* box-shadow: 1px 1px 7px rgba(34, 34, 34, 0.249); */
 }
 
 .priceState {
@@ -203,84 +207,16 @@ body {
   font-family: "cairo", sans-serif;
 }
 
-/* ! Sidebar */
-
-.sidebar {
-  z-index: 99;
+/* ! OVEERLAY */
+.overlay {
+  z-index: 10;
   position: fixed;
-  top: 0;
+  top: 3.8rem;
   left: 0;
-  width: 20%;
-  font-weight: 200;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  background-color: #fff;
-  transition: all 0.5s ease-in-out;
-  box-shadow: var(--shadow);
-  transform: translate(-120%);
-}
-
-.inner-container-aside {
-  height: 100%;
-  width: 90%;
-}
-
-.hide-side-bar {
-  transform: translate(0%);
-}
-
-.toggle-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 27px;
-  cursor: pointer;
-  color: #cb3b3b;
-  opacity: 1;
-}
-
-.toggle-close i:hover {
-  opacity: 0.5;
-}
-
-.ponit {
-  margin-top: 2rem;
-  width: 100%;
-  display: flex;
-  padding: 10px 20px;
-  justify-content: space-between;
-}
-
-.quote h1 {
-  font-size: 19px;
-  color: #0e153a;
-  text-shadow: var(--shadow);
-}
-
-.quote span {
-  display: block;
-  color: var(--primary);
-}
-
-.inner-container-aside ul {
-  margin-top: 1rem;
-  color: #0e153a;
-  width: 100%;
-  padding: 5px 10px;
-  list-style: disc;
-}
-
-.inner-container-aside li {
-  height: 40px;
-  font-size: 16px;
-  padding: 10px 10px;
-  font-weight: 600;
-  text-transform: capitalize;
-  letter-spacing: 2px;
-  border-bottom: var(--border);
-  border-color: #c4c4c4;
-  border-width: thin;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(to bottom, var(--darkBlue), #ffffff67);
+  opacity: 0;
 }
 
 /* ! drop down menu */
@@ -337,8 +273,12 @@ body {
 }
 
 @media screen and (max-width: 568px) {
-  .logo {
+  .hamburger {
     display: none;
+  }
+
+  .h-f-d {
+    display: block;
   }
 
   .info {
@@ -354,22 +294,16 @@ body {
     width: 100%;
   }
 
-  .sidebar {
-    width: 100%;
-  }
-
-
   .search-bar {
-    width: 75%;
+    width: 65%;
+  }
+
+  #sub {
+    width: 20%;
   }
 
 
-  /* 
-  #sub {
-    width: auto;
-    padding: 0 0.5rem;
-    border: 1px solid #111;
-  } */
+
 }
 
 @media screen and (max-width: 1024px) {}

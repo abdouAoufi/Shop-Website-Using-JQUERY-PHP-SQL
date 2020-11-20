@@ -26,6 +26,7 @@
 })()({
     1: [function (require, module, exports) {
         const toggle = $(".hamburger");
+        const toggleMobile = $('#hamForMobile');
         const closeToggle = $(".toggle-close");
         const sideBar = $(".sidebar");
         let isSideBarOpen = false;
@@ -36,6 +37,7 @@
 
 
             toggle.click(clickToggle);
+            toggleMobile.click(clickToggle);
             closeToggle.click(closeSidebar);
             $(".sec").click(function (param) {
                 if (isSideBarOpen) {
@@ -68,7 +70,7 @@
 
 
         function displayData(data) {
-             $.each(data, display);
+            $.each(data, display);
             $(".title-product, .img-container ").click(function () {
                 let id = parseInt($(this).children(0).html());
                 displayFull(data[id]);
@@ -136,13 +138,30 @@
         }
 
         function clickToggle() {
-            isSideBarOpen = true;
-            sideBar.addClass("hide-side-bar");
+            if (!isSideBarOpen) {
+                isSideBarOpen = true;
+                $('.overlay').addClass('fade-in');
+                $('.sidebar').addClass("fade-in");
+                $('.sidebar').removeClass("fade-out");
+                $('.overlay').removeClass('fade-out');
+                toggle.addClass("open");
+                toggleMobile.addClass("open");
+            } else {
+                closeSidebar();
+            }
+
+        }
+
+        function stopScrolling() {
+            $('body').addClass('o-h');
         }
 
         function closeSidebar() {
             isSideBarOpen = false;
-            sideBar.removeClass("hide-side-bar");
+            $('.sidebar').addClass("fade-out");
+            toggle.removeClass("open");
+            toggleMobile.removeClass("open");
+            $('.overlay').addClass('fade-out');
         }
 
 

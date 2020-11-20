@@ -62,7 +62,7 @@
 }
 
 #search {
-    width: 80%;
+    width: 85%;
     padding: 0.4rem 1.1rem;
     border-width: .3px;
     border: none;
@@ -75,7 +75,7 @@
     display: grid;
     place-items: center;
     border-left: rgba(207, 193, 193, 0.753) 1px solid;
-    width: 20%;
+    width: 15%;
     font-family: "Lato", sans-serif;
     background-color: transparent;
     cursor: pointer;
@@ -90,4 +90,12 @@
 
 #sub:hover {
     background-color: rgba(34, 34, 34, 0.174);
+}
+
+.fade-in {
+    animation: fade-in 200ms ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fade-out 200ms ease-in-out forwards;
 }

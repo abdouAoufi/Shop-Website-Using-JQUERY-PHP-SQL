@@ -21,65 +21,80 @@
 
     <body>
 
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="info-cont">
-                    <div class="hamburger">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                    <div class="logo">
-                        <img src="images/mouse.png" class="nav-logo"
-                            alt="" height="50" />
-                    </div>
-                </div>
+        <header>
+            <div class="overlay h-f-d">
 
-
-                <div class="search-bar">
-                    <input type="text" placeholder="Search"
-                        id="search">
-                    <div id="sub">
-                        <i class="fas fa-search"></i>
-                    </div>
-                </div>
-
-                <div class="info">
-                    <ul>
-                        <li id="sign-in"> <a href="signin.html">Sign
-                                up</a></li>
-                        <li id="log-in"> <a href="login.html">Log in</a></li>
-                    </ul>
-                </div>
             </div>
-        </nav>
+            <nav class="nav">
+                <div class="nav-container">
+                    <div class="info-cont">
+                        <a href="#" id="btnHamburgerhref"
+                            class="header__menu hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <div class="logo">
+                            <img src="images/mouse.png"
+                                class="nav-logo"
+                                alt="" height="40" />
+                        </div>
+                    </div>
+
+
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search"
+                            id="search">
+                        <div id="sub">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <ul>
+                            <li id="sign-in"> <a href="signin.html">Sign
+                                    up</a></li>
+                            <li id="log-in"> <a href="login.html">Log
+                                    in</a></li>
+                        </ul>
+                    </div>
+
+                    <a id="hamForMobile" href="#"
+                        class="header__menu h-f-d">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </nav>
+        </header>
 
 
         <main>
-            <aside class="sidebar">
-                <div class="toggle-close"> <i class="fas
-                        fa-window-close"></i></div>
-                <div class="inner-container-aside">
-                    <div class="ponit"> <img src="images/mouse.png"
-                            class="nav-logo" alt="" height="50" />
-                        <div class="quote">
-                            <h1>Abdou <span>Shop</span></h1>
-                        </div>
+            <div class="sidebar">
+
+                <div class="info-cont-side-bar">
+                    <a href="#" id="ham"
+                        class="header__menu hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <div class="ham-logo">
+                        <img src="images/mouse.png"
+                            alt="" height="40" />
                     </div>
-                    <ul class="categories">
-                        <li><a href="home.html">Electronic</a></li>
-                        <li><a href="home.html">Computer</a> </li>
-                        <li><a href="home.html">Kitchen</a></li>
-                        <li><a href="home.html">Electric</a></li>
-                        <li><a href="home.html">Software</a></li>
-                        <li><a href="home.html">Books</a></li>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="home.html">Smartphone</a></li>
-                        <li><a href="home.html">Tools</a></li>
-                        <li><a href="home.html">school</a></li>
-                        <li><a href="home.html">travel</a></li>
-                        <li><a href="home.html">accessoire</a></li>
-                    </ul>
                 </div>
-            </aside>
+                <div class="inner-container-aside">
+                    <div class="categories">
+                        <a href="home.html">Home</a>
+                        <a href="home.html">Notitication</a>
+                        <a href="home.html">Message</a>
+                        <a href="home.html">Alerts</a>
+                        <a href="home.html">Software</a>
+                    </div>
+                </div>
+            </div>
 
             <section class="sec">
                 <div class="section-container">
