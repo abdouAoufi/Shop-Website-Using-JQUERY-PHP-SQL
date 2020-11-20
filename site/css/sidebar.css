@@ -4,37 +4,58 @@
     width: 20%;
     height: 100%;
     top: 0;
-    background-color: #FFF;
+    background-color: #fff;
     transition: all 0.5s ease-in-out;
     box-shadow: var(--shadow);
-    opacity: 1;
+    opacity: 0;
+    display: block;
 }
 
-.inner-container-aside {
-    /* padding: 1rem 2rem; */
-    padding: 1rem 0;
-    margin: 0 .8rem;
-
-}
-
-.hide-side-bar {
-    transform: translate(0%);
-}
-
-.info-cont-side-bar {
+.inner {
     display: flex;
-    place-items: center;
-    padding-left: 2.3rem;
-    padding-top: .8rem;
-    padding-bottom: .8rem;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.6rem;
+    /* background-color: #ffcef3; */
+    border-bottom: thin solid #c4c4c483;
+
+}
+
+/* ! PROFILE */
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem .7rem;
+    background-color: #ecfffb;
+    width: 100%;
+    border-bottom: thin solid #c4c4c483;
+
+}
+
+.prfl-info {
+    font-size: 19px;
+    font-family: "Lato", sans-serif;
+
+}
+
+
+.prfl-info #name {
+    margin: 0.3rem 0;
+}
+
+.prfl-info #email {
+    margin: 0.3rem 0;
+    color: #635d5d;
+}
+
+.prfl-picture img {
+    clip-path: circle(45% at 50% 50%);
 }
 
 #ham {
     margin-right: 3.5rem;
-}
-
-.ham-logo {
-    /* margin: auto; */
 }
 
 
@@ -61,21 +82,38 @@
     opacity: 0;
 }
 
-
-.categories a {
-    display: block;
-    margin: auto;
-    padding: 0.45rem 1rem;
-    font-weight: 500;
+.list-container {
+    width: 100%;
 }
 
-
-/* !PROFILE */
-
-.profile {
+.site-pop {
+    display: block;
     width: 100%;
-    height: 60px;
-    border: 1px solid #222;
+    border-bottom: thin solid #c4c4c4d0;
+}
+
+.list-element {
+    padding: .7rem 1rem;
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    align-items: center;
+}
+
+.list-element img {
+    padding: 0rem 1rem;
+}
+
+.list-element p {
+    color: #756f6f;
+    font-size: 1.0rem;
+    font-weight: 550;
+}
+
+.list-element:hover,
+.list-element:active {
+    background-color: rgba(238, 238, 238, 0.705);
 }
 
 
@@ -95,21 +133,26 @@
         background-color: #fff;
         transition: all 0.5s ease-in-out;
         box-shadow: var(--shadow);
-        margin-top: .5rem;
-        border-radius: 2px;
+        margin-top: 0.5rem;
+        border-radius: 5px;
         opacity: 0;
+    }
+
+    .profile {
+        border-radius: 5px;
     }
 
     .categories a {
         padding: 0.45rem 4rem;
     }
 
-
     .inner-container-aside {
         padding: 1rem 0;
     }
 
-    .ham-logo {
+    .inner {
         display: none;
     }
+
+
 }
