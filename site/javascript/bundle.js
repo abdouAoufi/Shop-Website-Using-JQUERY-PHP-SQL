@@ -26,7 +26,6 @@
 })()({
     1: [function (require, module, exports) {
         const toggle = $(".hamburger");
-        const toggleMobile = $('#hamForMobile');
         const closeToggle = $(".toggle-close");
         const sideBar = $(".sidebar");
         let isSideBarOpen = false;
@@ -38,7 +37,6 @@
 
             toggle.click(clickToggle);
             toggleMobile.click(clickToggle);
-            closeToggle.click(closeSidebar);
             $(".sec").click(function (param) {
                 if (isSideBarOpen) {
                     closeSidebar();
@@ -145,9 +143,10 @@
                 $('.sidebar').removeClass("fade-out");
                 $('.overlay').removeClass('fade-out');
                 toggle.addClass("open");
-                toggleMobile.addClass("open");
+                stopScrolling()
             } else {
                 closeSidebar();
+                backScrolling()
             }
 
         }
@@ -156,11 +155,14 @@
             $('body').addClass('o-h');
         }
 
+        function backScrolling() {
+            $('body').removeClass('o-h');
+        }
+
         function closeSidebar() {
             isSideBarOpen = false;
             $('.sidebar').addClass("fade-out");
             toggle.removeClass("open");
-            toggleMobile.removeClass("open");
             $('.overlay').addClass('fade-out');
         }
 
@@ -286,7 +288,6 @@
                </section>
 
                `);
-            $('.nav').hide();
         }
     }, {
         "moment": 2

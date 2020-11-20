@@ -51,7 +51,9 @@
 }
 
 .prfl-picture img {
-    clip-path: circle(45% at 50% 50%);
+    width: 55px;
+    height: 55px;
+    clip-path: circle(50% at 50% 50%);
 }
 
 #ham {
