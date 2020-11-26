@@ -192,10 +192,6 @@
                 }
             });
 
-            $(".displayer").not(document.getElementById("pro")).click(function () {
-                hideFull();
-            });
-
 
             $('.dis-see').click(function () {
                 showImage();

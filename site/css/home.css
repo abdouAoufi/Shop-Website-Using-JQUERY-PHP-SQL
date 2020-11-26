@@ -59,12 +59,6 @@ body {
   margin: auto;
 }
 
-/* ! nav */
-
-/* ! section */
-
-
-
 .section-container {
   width: 100vw;
   max-width: 1270px;
@@ -162,9 +156,10 @@ body {
 }
 
 .price-product {
-  padding-right: 2.2rem;
+  padding-right: 2rem;
   font-weight: 600;
   color: #cb3b3b;
+  max-lines: 1;
 }
 
 .state-product {
