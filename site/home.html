@@ -1,63 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome </title>
-    <link rel="stylesheet" href="css/scss/home.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,
+            initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Shop</title>
+        <link rel="stylesheet" href="style/main.css">
+        <!--! FONT AWESOME -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            />
+        <!-- ! ICON HEADER -->
+        <link rel="shortcut icon" href="images/fav-icon.png">
+    </head>
 
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
-</head>
+    <body>
 
-<body>
+        <!--! NAVIGATION-->
 
-    <!-- ! HEADER -->
-
-    <header class="hd">
-        <div class="lgn-part">
-            <a href="#"> <Button class="btn"> Login </Button> </a>
-            <a href="#"> <Button class="btn"> Create Account </Button> </a>
-        </div>
-
-        <a href="#">
-            <div class="logo-container">
-                <div class="logo">
-                    <img src="images/home pagelogo.svg" alt="logo">
+        <nav>
+            <!--SOCIAL LINKS AND PHONE NUMBER -->
+            <div class="social-call">
+                <!--SOCIAL LINKS -->
+                <div class="social">
+                    <a href="#"> <i class="fab fa-facebook"></i></a>
+                    <a href="#"> <i class="fab fa-twitter"></i></a>
+                    <a href="#"> <i class="fab fa-youtube"></i></a>
+                    <a href="#"> <i class="fab fa-instagram"></i></a>
+                </div>
+                <!--PHONE NUMBER-->
+                <div class="phone">
+                    <span>Call +123456789</span>
                 </div>
 
-                <div class="title">
-                    <h1>AD <span>Shop</span> </h1>
-                </div>
             </div>
-        </a>
-    </header>
+        </nav>
+
+
+        <!--! MENU BAR-->
+
+        <div class="navigation">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+
+
+                <li><a href="#">Men</a>
+                    <!--! SALE LABEL-->
+                    <span class="sale-label">sale</span>
+                </li>
 
 
 
-    <!-- ! HERO -->
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Shop</a></li>
+            </ul>
 
-    <section class="hero">
-        <div class="conteiner">
-            <h1>Explore best today selection <span>Start now</span> </h1>
+            <div class="right-menu">
 
+                <!--* SEARCH-->
+                <a href="#" class="search"> <i class="fas fa-search"></i></a>
+                <!--* USER-->
+                <a href=#""class="user"> <i class="fas fa-user"></i></a>
+                <!--* cart-icon-->
+                <a href="#"><i class="fas fa-shopping-cart">
+                        <span class="number-cart-product">0</span>
+                    </i>
+                </a>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet incidunt porro ut, est ad beatae fugiat
-                at sunt nesciunt nihil quia, culpa expedita. Vitae vel pariatur, dolor molestiae architecto quos.</p>
-
-            <div class="inpt-container">
-                <input type="email" placeholder="your email">
-                <button>Request acess</button>
             </div>
         </div>
-    </section>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-    <script>
+
+        <!--! SEARCH BAR -->
+        <div class="search-bar">
+            <!--search input-->
+            <div class="search-input">
+                <input class="ser" type="text" placeholder="Search for
+                    product">
+                <a href="#" class="search-cancel">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!--! LOGIN AND SIGN UP FORM-->
+        <div class="form">
+            <!--! LOGIN-->
+            <div class="login-form" id="login-form">
+
+                <a href="#">
+                    <div class="form-cancel">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </a>
+                <strong>Log In</strong>
+                <form action="">
+                    <input type="email"
+                        placeholder="Example@email.com" name="email">
+                    <input type="password" placeholder="Password"
+                        name="email">
+
+                    <!--submit-->
+                    <input type="submit" value="Log In">
+                </form>
+                <div class="form-btns">
+                    <a href="#" class="forget"> Forget Your Password?</a>
+                    <a href="#" class="sign-up-btn">Create Account</a>
+                </div>
+            </div>
+
+
+            <!--! SIGN UP-->
+            <div class="sign-up-form" id="sign-up-form">
+
+                <a href="#">
+                    <div class="form-cancel">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </a>
+                <strong>Sign up</strong>
+                <form action="">
+                    <input type="text" placeholder="Full name"
+                        name="email">
+                    <input type="email"
+                        placeholder="Example@email.com" name="email">
+                    <input type="password" placeholder="Password"
+                        name="email">
+
+                    <!--submit-->
+                    <input type="submit" value="Sign up">
+                </form>
+                <div class="form-btns">
+                    <a href="#" class="already"> Already have account?</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="full-slider-box">
+
+            <div class="f-slide-1">
+
+            </div>
+
+            <div class="f-slide-2">
+
+            </div>
+
+
+            <div class="f-slide-3">
+
+            </div>
+
+            <div class="f-slide-4">
+
+            </div>
+            <div class="slider-text-container">
+                <div class="f-slide-text">
+                    <span>Limited offer</span>
+                    <strong>90% off <br />
+                        With <font>promo code</font>
+                    </strong>
+                    <a href="#" class="f-slider-btn"> Shop Now </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="feature-heading">
+            <h2>Features Categories</h2>
+        </div>
+
+
+        <div class="feature-box">
+            <a href="#">
+                <img src="images/feature_1.jpg" alt="">
+            </a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
         $(document).ready(function () {
+            /* !SEARCH BAR */
 
+            $('.search').click(function () {
+                $('.search-bar').toggleClass('search-bar-active');
+            });
+
+
+            $('.search-cancel').click(function () {
+
+                $('.ser').val("");
+            })
+
+            /* !LOGIN - SIGN UP */
+
+            $('.user').click(function () {
+                $('.form').addClass('form-active');
+            });
+
+
+            /* Close */
+
+            $('.form-cancel').click(function () {
+                $('.form').removeClass('form-active');
+                $('.form').removeClass('sign-active');
+
+            });
+
+
+            $('.sign-up-btn').click(function () {
+                $('.form').addClass('sign-active');
+            });
+
+            $('.already').click(function () {
+
+                $('.form').removeClass('sign-active');
+                $('.form').addClass('form-active');
+            });
+
+            $('.f-slider-btn').click(function () {
+
+            })
+
+            let images = ['/images/Slider_01.jpg', '/images/Slider_02.jpg', '/images/Slider_03.jpg',
+                '/images/Slider_04.jpg'
+            ];
+
+            // swichImages();
+
+            function swichImages() {
+
+
+
+                setTimeout(function () {
+                    $('.f-slide-1').css(
+                        "transform", "translateX(500%)",
+                    ).delay(3000);
+                }, 2000)
+
+                setTimeout(function () {
+                    $('.f-slide-2').css(
+                        "transform", "translateX(0)",
+                    ).delay(3000);
+                }, 2000)
+
+
+                setTimeout(function () {
+                    $('.f-slide-3').css(
+                        "transform", "translateX(0)",
+                    ).delay(3000);
+                }, 3000)
+
+                setTimeout(function () {
+                    $('.f-slide-4').css(
+                        "transform", "translateX(0)",
+                    ).delay(3000);
+                }, 4000)
+
+
+                setTimeout(function () {
+                    $('.f-slide-1').css(
+                        "transform", "translateX(-500%)",
+                    ).delay(3000);
+                }, 5000)
+
+
+
+
+
+
+
+
+                // $('.f-slide-2').css(
+                //     "transform", "translateX(0)",
+                // );
+
+
+
+
+            }
         })
     </script>
-</body>
+    </body>
 
 </html>
