@@ -2,9 +2,11 @@
 @import 'global';
 @import 'mixins';
 @import 'bg';
+@import 'ad';
 
 
 header {
+
 
 
     .lgn-part {
@@ -34,7 +36,7 @@ header {
             border-radius: 6px;
             transition: 250ms all ease-in-out;
             font-size: 1.2rem;
-            color: white;
+            color: $nice_black;
             letter-spacing: 1px;
             border: 0.3rem solid transparent;
 
@@ -49,14 +51,18 @@ header {
     .logo-container {
         display: flex;
         place-items: center;
-        padding: 3rem 5rem;
+        padding: 3rem;
 
         @include mobile {
             display: grid;
+            padding: 0;
         }
 
         @include tablet {
             display: grid;
+            padding: 0;
+            margin-top: 3.5rem;
+
         }
 
         .logo {
@@ -84,7 +90,7 @@ header {
         }
 
         @include mobile {
-            margin-top: 1rem;
+            margin-top: 1.8rem;
             font-size: 0.8rem;
         }
 
