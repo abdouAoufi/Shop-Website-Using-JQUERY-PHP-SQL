@@ -1,5 +1,5 @@
 @import 'colors';
-@import 'mixins';
+@import 'include-media';
 
 footer {
     padding: 2.5rem;
@@ -34,7 +34,7 @@ footer {
         width: 60px;
         grid-area: logo;
 
-        @include media(">phone", "<=tablet", "<=phone") {
+        @include media(">phone", "<=tablet") {
             margin-bottom: 1rem;
 
         }
@@ -84,9 +84,18 @@ footer {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // align-items: flex-start;
+        align-items: flex-start;
 
+        @include media(">phone", "<=tablet") {
+            align-items: center;
 
+        }
+
+        @include media("<=phone") {
+            align-items: center;
+            margin-bottom: 1rem;
+
+        }
 
 
         a {
@@ -107,6 +116,8 @@ footer {
             @include media(">phone", "<=tablet") {
                 margin-bottom: 1rem;
                 display: block;
+
+
 
             }
 
@@ -145,15 +156,16 @@ footer {
 
         a {
             border-radius: 4px;
-            color: #FFF;
+            color: #0b9d8a;
             display: block;
             padding: 0.4rem 0.8rem;
-            background-color: #0b9d8a;
+            border: 2px solid #0b9d8a;
         }
     }
 
 
     .footer__copyright {
         grid-area: copyright;
+        font-size: 13px;
     }
 }
