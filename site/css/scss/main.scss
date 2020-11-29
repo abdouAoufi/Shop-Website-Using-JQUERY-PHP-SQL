@@ -6,6 +6,8 @@
 @import 'feature-heading';
 @import 'colors';
 @import 'footer';
+@import 'mixins';
+@import 'include-media';
 
 body {
     font-family: 'poppins';
@@ -40,6 +42,27 @@ nav {
         align-items: center;
         font-size: 0.9rem;
 
+        .social {
+
+            @include media(">phone", "<=tablet") {
+                display: none;
+            }
+
+            @include media('<=phone') {
+                display: none;
+            }
+        }
+
+        .phone {
+            @include media(">phone", "<=tablet") {
+                display: none;
+            }
+
+            @include media('<=phone') {
+                display: none;
+            }
+        }
+
 
         a {
             margin: 0 5px;
@@ -72,89 +95,102 @@ nav {
     .menu {
         display: flex;
 
-        li {
-            margin: 20px;
-            position: relative;
-            display: flex;
-            text-transform: uppercase;
-            font-weight: 500;
+        @include media(">phone", "<=tablet") {
+            display: none;
+        }
 
-
-
-            a {
-                color: #555555;
-
-                &:hover {
-                    color: #0b9d8a;
-                    transition: all ease 0.3s;
-                }
-
-            }
-
-            .sale-label {
-                width: 38px;
-                height: 18px;
-                background-color: #f76b6a;
-                color: white;
-                font-weight: 400;
-                justify-content: center;
-                text-align: center;
-                font-size: 0.8rem;
-                text-transform: uppercase;
-                position: absolute;
-                top: -23px;
-                right: -20px;
-
-                &:after {
-                    content: '';
-                    width: 0px;
-                    height: 0px;
-                    border-bottom: 5px solid transparent;
-                    border-left: 3px solid transparent;
-                    border-top: 7px solid #f76b6a;
-                    border-right: 5px solid transparent;
-                    position: absolute;
-                    left: 10%;
-                    top: 100%;
-
-                }
-            }
+        @include media('<=phone') {
+            display: none;
         }
 
 
-    }
+        position: relative;
+        display: flex;
+        text-transform: uppercase;
+        font-weight: 500;
 
-    .right-menu {
+
+
         a {
-            margin: 0px 10px;
-            font-size: 1.2rem;
-            color: rgba(0, 0, 0, 0.75);
-            position: relative;
+            color: #555555;
 
             &:hover {
                 color: #0b9d8a;
                 transition: all ease 0.3s;
             }
 
-            .number-cart-product {
-                position: absolute;
-                top: -17px;
-                right: -17px;
-                width: 25px;
-                height: 25px;
-                font-size: 0.87rem;
-                color: white;
-                display: flex;
-                border-radius: 50%;
-                background: #0b9d8a;
-                justify-content: center;
-                align-items: center;
-                font-weight: 400;
-            }
         }
 
+        .sale-label {
+            width: 38px;
+            height: 18px;
+            background-color: #f76b6a;
+            color: white;
+            font-weight: 400;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            position: absolute;
+            top: -23px;
+            right: -20px;
 
+            &:after {
+                content: '';
+                width: 0px;
+                height: 0px;
+                border-bottom: 5px solid transparent;
+                border-left: 3px solid transparent;
+                border-top: 7px solid #f76b6a;
+                border-right: 5px solid transparent;
+                position: absolute;
+                left: 10%;
+                top: 100%;
+
+            }
+
+        }
     }
+
+
+}
+
+.right-menu {
+    a {
+        margin: 0px 10px;
+        font-size: 1.2rem;
+        color: #000000bf;
+        position: relative;
+
+
+        @include media("<=phone") {
+            display: none;
+        }
+
+        &:hover {
+            color: #0b9d8a;
+            transition: all ease 0.3s;
+        }
+
+        .number-cart-product {
+            position: absolute;
+            top: -17px;
+            right: -17px;
+            width: 25px;
+            height: 25px;
+            font-size: 0.87rem;
+            color: white;
+            display: flex;
+            border-radius: 50%;
+            background: #0b9d8a;
+            justify-content: center;
+            align-items: center;
+            font-weight: 400;
+        }
+    }
+
+
+}
 
 }
 

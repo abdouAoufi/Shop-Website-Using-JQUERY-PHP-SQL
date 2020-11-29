@@ -1,213 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
             initial-scale=1.0">
-        <title> Exploring today</title>
-        <link rel="shortcut icon" href="images/mouse.png">
-        <link rel="stylesheet" href="css/home.css">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-            />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-            rel="stylesheet">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-            rel="stylesheet">
-    </head>
+    <title> Exploring today</title>
+    <link rel="shortcut icon" href="images/mouse.png">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
 
-    <body>
+<body>
 
-        <header>
-            <div class="overlay h-f-d">
+    <header>
+        <div class="overlay h-f-d">
 
-            </div>
-            <nav class="nav">
-                <div class="nav-container">
-                    <div class="info-cont">
-                        <a href="#" id="btnHamburgerhref"
-                            class="header__menu hamburger">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </a>
-                        <div class="logo">
-                            <img src="images/mouse.png"
-                                class="nav-logo"
-                                alt="" height="35" />
-                        </div>
-                    </div>
-
-
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search"
-                            id="search">
-                        <div id="sub">
-                            <i class="fas fa-search"></i>
-                        </div>
-                    </div>
-
-                    <div class="info">
-                        <ul>
-                            <li id="sign-in"> <a href="signin.html">Sign
-                                    up</a></li>
-                            <li id="log-in"> <a href="login.html">Log
-                                    in</a></li>
-                        </ul>
-                    </div>
-
-                    <a id="hamForMobile" href="#"
-                        class="header__menu h-f-d hamburger">
+        </div>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="info-cont">
+                    <a href="#" id="btnHamburgerhref" class="header__menu hamburger">
                         <span></span>
                         <span></span>
                         <span></span>
                     </a>
+                    <div class="logo">
+                        <img src="images/mouse.png" class="nav-logo" alt="" height="35" />
+                    </div>
                 </div>
-            </nav>
-        </header>
 
 
-        <main>
-            <!--! SIDE BAR-->
-            <div class="sidebar">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search" id="search">
+                    <div id="sub">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
 
-                <!--! inner NAV-->
-                <div class="inner">
-                    <a href="#" id="ham"
-                        class="header__menu hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                <div class="info">
+                    <ul>
+                        <li id="sign-in"> <a href="signin.html">Sign
+                                up</a></li>
+                        <li id="log-in"> <a href="login.html">Log
+                                in</a></li>
+                    </ul>
+                </div>
+
+                <a id="hamForMobile" href="#" class="header__menu h-f-d hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!--! SIDE BAR-->
+        <div class="sidebar">
+
+            <!--! inner NAV-->
+            <div class="inner">
+                <a href="#" id="ham" class="header__menu hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
+                <div class="ham-logo">
+                    <img src="images/mouse.png" alt="" height="40" />
+                </div>
+            </div>
+
+            <!--! Profile-->
+            <div class="profile">
+                <div class="prfl-info">
+                    <h5 id="name">Aoufi Abderahmane</h5>
+                    <h6 id="email"> Abdouou7@gmail.com</h6>
+                </div>
+                <div class="prfl-picture">
+                    <img src="images/sidebar/portrait.jpg" alt="">
+                </div>
+            </div>
+
+            <!--! liST-->
+
+
+            <div class="list-container">
+                <div class="site-pop">
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/house.png" alt="" height="25">
+                            <p>Home</p>
+                        </div>
                     </a>
-                    <div class="ham-logo">
-                        <img src="images/mouse.png"
-                            alt="" height="40" />
-                    </div>
+
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/trend.svg" alt="" height="25">
+                            <p>Trending</p>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/abonner.svg" alt="" height="25">
+                            <p>Subscribers</p>
+                        </div>
+                    </a>
                 </div>
 
-                <!--! Profile-->
-                <div class="profile">
-                    <div class="prfl-info">
-                        <h5 id="name">Aoufi Abderahmane</h5>
-                        <h6 id="email"> Abdouou7@gmail.com</h6>
-                    </div>
-                    <div class="prfl-picture">
-                        <img src="images/sidebar/portrait.jpg" alt="">
-                    </div>
+                <div class="site-pop">
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/article.svg" alt="" height="25">
+                            <p>My post</p>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/bag.svg" alt="" height="25">
+                            <p>My bag</p>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/favorite.svg" alt="" height="25">
+                            <p>Favorites</p>
+                        </div>
+                    </a>
                 </div>
 
-                <!--! liST-->
+                <div class="site-pop">
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/article.svg" alt="" height="25">
+                            <p>My post</p>
+                        </div>
+                    </a>
 
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/bag.svg" alt="" height="25">
+                            <p>My bag</p>
+                        </div>
+                    </a>
 
-                <div class="list-container">
-                    <div class="site-pop">
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/house.png"
-                                    alt=""
-                                    height="25">
-                                <p>Home</p>
-                            </div>
-                        </a>
-
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/trend.svg"
-                                    alt=""
-                                    height="25">
-                                <p>Trending</p>
-                            </div>
-                        </a>
-
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/abonner.svg"
-                                    alt=""
-                                    height="25">
-                                <p>Subscribers</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="site-pop">
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/article.svg"
-                                    alt=""
-                                    height="25">
-                                <p>My post</p>
-                            </div>
-                        </a>
-
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/bag.svg"
-                                    alt=""
-                                    height="25">
-                                <p>My bag</p>
-                            </div>
-                        </a>
-
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/favorite.svg"
-                                    alt=""
-                                    height="25">
-                                <p>Favorites</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="site-pop">
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/article.svg"
-                                    alt=""
-                                    height="25">
-                                <p>My post</p>
-                            </div>
-                        </a>
-
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/bag.svg"
-                                    alt=""
-                                    height="25">
-                                <p>My bag</p>
-                            </div>
-                        </a>
-
-                        <a href="#"> <div class="list-element">
-                                <img
-                                    src="images/sidebar/favorite.svg"
-                                    alt=""
-                                    height="25">
-                                <p>Favorites</p>
-                            </div>
-                        </a>
-                    </div>
-
+                    <a href="#">
+                        <div class="list-element">
+                            <img src="images/sidebar/favorite.svg" alt="" height="25">
+                            <p>Favorites</p>
+                        </div>
+                    </a>
                 </div>
-
 
             </div>
 
-            <!--! END SIDE BAR-->
 
-            <section class="sec">
-                <div class="section-container">
-                </div>
-            </section>
+        </div>
 
-        </main>
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
-        <script src="javascript/bundle.js">
+        <!--! END SIDE BAR-->
+
+        <section class="sec">
+            <div class="section-container">
+            </div>
+        </section>
+
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="bundle.js">
 
     </script>
-    </body>
+</body>
 
 </html>
