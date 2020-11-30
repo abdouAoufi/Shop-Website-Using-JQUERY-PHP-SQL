@@ -49,6 +49,8 @@ body {
   /* background-image: linear-gradient(135deg, #8BC6EC 20%, #9599E2 80%); */
 }
 
+
+
 .hide {
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 4;

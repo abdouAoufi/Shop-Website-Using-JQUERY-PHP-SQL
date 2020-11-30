@@ -2,6 +2,7 @@
 
 nav {
     padding: .6rem 2rem;
+    z-index: 6;
 }
 
 
@@ -44,16 +45,56 @@ nav {
             display: none;
         }
 
+        #SHOP {
+            position: relative;
+
+            &:hover #target {
+                display: block;
+            }
+
+            span {
+                position: absolute;
+                top: -17px;
+                left: 20px;
+                width: auto;
+                /* right: -40px; */
+                background-color: #F7866F;
+                padding: 0 0.2rem;
+                color: white;
+                font-size: 0.8rem;
+
+                &:after {
+                    content: '';
+                    width: 0px;
+                    height: 0px;
+                    border-bottom: 5px solid transparent;
+                    border-left: 3px solid transparent;
+                    border-top: 5px solid #F7866F;
+                    border-right: 5px solid transparent;
+                    position: absolute;
+                    left: 10%;
+                    top: 100%;
+
+                }
+            }
+        }
+
 
 
 
         a {
             text-transform: uppercase;
-            color: #262626;
+            font-weight: 500;
+            color: #555555;
+
+            &:hover {
+                color: #0b9d8a;
+                transition: all ease 0.3s;
+            }
         }
 
         a:not(:last-child) {
-            margin-right: 0.6rem;
+            margin-right: 0.9rem;
         }
     }
 
@@ -123,4 +164,57 @@ nav {
         }
     }
 
+}
+
+#SHOP:hover {
+    color: #F7866F;
+}
+
+
+
+.shop-menu {
+    height: auto;
+    z-index: 10;
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    display: none;
+    align-self: center;
+
+    .cont {
+        background-color: #FFFFFF;
+        width: 80%;
+        padding: 2rem 0;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        border-radius: 0.5rem;
+
+
+        .list {
+            // border: 1px solid #0b9d8a;
+            text-align: left;
+
+            ul {
+                margin: 0.5rem 0;
+                padding: 0 0.3rem;
+                ;
+
+
+            }
+
+            li {
+                margin-bottom: 0.2rem;
+
+                a {
+                    color: #525050;
+
+                }
+            }
+        }
+    }
+}
+
+.showw {
+    display: block !important;
 }

@@ -1,0 +1,168 @@
+@import 'include-media';
+
+body {
+    background: #EEE;
+}
+
+nav {
+    background-color: rgb(250, 249, 249);
+}
+
+.papa {
+    padding: 1rem;
+    width: 80%;
+    height: 90vh;
+    font-family: 'poppins';
+    display: grid;
+    place-items: center;
+    margin: auto;
+
+    @include media('<tablet') {
+        width: 100%;
+        padding: 0;
+    }
+
+}
+
+.container {
+    background-color: #FFF;
+    display: grid;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 7px 10px 10px rgba($color: #000000, $alpha: 0.08);
+    padding: 4rem 2rem;
+    grid-template-columns: 2fr 1.2fr;
+
+    @include media('>phone', '<=420px') {
+        grid-template-columns: 1fr;
+    }
+
+    @include media('<=phone') {
+        grid-template-columns: 1fr;
+        padding: 2rem 0.2rem;
+    }
+
+    .image-header {
+        margin: auto;
+        // width: 55%;
+
+        @include media('>phone', '<=420px') {
+            display: none;
+        }
+
+        @include media('<=phone') {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .login-form {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        strong {
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .load {
+            display: flex;
+            width: 300px;
+            // justify-content: ;
+            border-radius: 1rem;
+            background-color: #EEE;
+            place-items: center;
+            align-items: center;
+            margin-bottom: 0.5rem;
+
+
+            i {
+                padding: 0 0.5rem 0 1rem;
+                color: #979797;
+            }
+
+            input {
+                outline: none;
+                border: 0;
+                height: 2.9rem;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+                font-weight: 500;
+                background-color: #EEE;
+
+            }
+        }
+
+        .login {
+            margin-top: 1.5rem;
+
+            input {
+                width: 100%;
+                height: 2.6rem;
+                border-radius: 1rem;
+                font-size: 0.9rem;
+                font-weight: 900;
+                background-color: #0b9d8a;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    .crate {
+        text-align: center;
+
+        a {
+            color: #0b9d8a;
+            font-weight: 500;
+            font-size: 1rem;
+
+        }
+
+        i {
+            margin-left: 0.6rem;
+            color: #50978e;
+            font-weight: 600;
+            font-size: 1.0rem;
+        }
+    }
+
+    .forget {
+        padding-left: 0.5rem;
+        font-size: 0.9rem;
+        color: #9b9797;
+        text-align: center;
+        margin: 1rem 0;
+
+        a {
+            color: #9b9797;
+
+            span {
+                color: rgb(230, 156, 142);
+
+                &:hover {
+                    color: #9053c7;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    h4 {
+        text-align: center;
+        margin: 0;
+        color: #999696;
+    }
+}

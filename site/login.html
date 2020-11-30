@@ -11,61 +11,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
     <!-- style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login/mail.css">
+    <link rel="stylesheet" href="css/home/main.css">
 </head>
+<nav>
 
-<body>
-    <!-- Navigation bar -->
-    <nav class="nav">
-        <div class="nav-center">
-            <!-- ! phone -->
-            <div class="nav-header">
-                <div class="cont">
-                    <img src="images/mouse.png" class="nav-logo" alt="" height="50" />
-                    <div class="quote">
-                        <h1>Abdou <span>Shop</span></h1>
-                        <h4>Taste Quality</h4>
-                    </div>
-                </div>
-                <button class="sign-in"><a href="signin.html" id="sign">sign
-                        up</a></button>
+        <div class="cont-nav">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
             </div>
-        </div>
+
+
+          
+
+            <div class="right-menu">
+
+                <!--* SEARCH-->
+                <a href="#" class="search"> <i class="fas
+                            fa-search"></i></a>
+                <!--* USER-->
+                <a href="#" class="user"> <i class="fas fa-user"></i></a>
+                <!--* cart-icon-->
+                <a href="#" class="shop"><i class="fas
+                            fa-shopping-cart">
+                        <span class="number-cart-product">0</span>
+                    </i>
+                </a>
+
+            </div>
     </nav>
 
-    <div class="final-result">
-        <div class="content">
-            <div class="final__register-wrapper">
-                <div class="final__register-block">
-                    <h1 class="">Login to your account</h1>
-                    <p>Quickly &amp; easily login to your
-                        account using
-                        the form below.</p>
-                    <form action="index.html">
-                        <input type="email" placeholder="Enter your email" />
-                        <input type="password" placeholder="Enter your password" />
-                        <input type="submit" value="Log in" />
+    <div class="papa login-form">
+            <div class="container">
+                <div class="image-header">
+                    <img src="images/img-01.png" alt="">
+                </div>
+
+                <div class="login-form">
+                    <strong>Member Login</strong>
+
+                    <form action="home.html">
+                        <div class="load">
+                            <i class="fas fa-at"></i>
+                            <input type="email" class="email" placeholder="Email">
+                        </div>
+
+                        <div class="load">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" class="password" placeholder="Password">
+                        </div>
+
+
+                        <div class="login">
+                                <a href="#">
+                                <input type="submit" class="email" value="Login">
+                                </a>
+                        </div>
+
                     </form>
+
+                    <p class="forget">Forget <a href="#"> <span>Username</span> or <span>Password</span> </a></p>
+
+                    <h4>Or </h4>
+
+                    <p class="crate"> <a href="signin.html"> Create account  </a> <i class="fas fa-arrow-right"></i></p>
+
+                    
                 </div>
             </div>
-        </div>
     </div>
 
 
-    <div class="sign-up-hint">
-        <h2>You can sign up Easely right now</h2>
-    </div>
-
+ 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- my script -->
     <script>
-        $(document).ready(function () {
-            $(".final__register-block").fadeIn(700);
-            $(".sign-in").hover(function () {
-                $(".sign-up-hint").toggleClass("show-hint");
-            });
-        });
+       
     </script>
 </body>
 

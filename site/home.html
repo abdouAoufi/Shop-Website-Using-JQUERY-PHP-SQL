@@ -1,294 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
             initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Shop</title>
-        <link rel="stylesheet" href="css/scss/main.css">
-        <!--! FONT AWESOME -->
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-            />
-        <!-- ! ICON HEADER -->
-        <link rel="shortcut icon" href="images/fav-icon.png">
-    </head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/home/main.css">
+    <!--! FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <!-- ! ICON HEADER -->
+    <link rel="shortcut icon" href="images/fav-icon.png">
+    <!--! BOOTSTRAP -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <body>
+</head>
 
-        <!--! NAVIGATION-->
+<body>
 
-        <nav>
+    <!--! NAVIGATION-->
 
-            <div class="cont-nav">
+    <nav>
 
-                <div class="logo">
-                    <img src="images/logo.png" alt="logo">
-                </div>
+        <div class="cont-nav">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
 
 
-                <div class="center-menu">
-                    <a href="#">Men</a>
-                    <a href="#">Women</a>
-                    <a href="#">New</a>
-                    <a href="#">Shop</a>
-                    <a href="#">Sold</a>
-                </div>
+            <div class="center-menu">
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">New</a>
+                <a href="#" id="SHOP">Shop <span>NEW</span> </a>
+                <a href="#">Sold</a>
+            </div>
 
-                <div class="right-menu">
+            <div class="right-menu">
 
-                    <!--* SEARCH-->
-                    <a href="#" class="search"> <i class="fas
+                <!--* SEARCH-->
+                <a href="#" class="search"> <i class="fas
                             fa-search"></i></a>
-                    <!--* USER-->
-                    <a href="#" class="user"> <i class="fas fa-user"></i></a>
-                    <!--* cart-icon-->
-                    <a href="#" class="shop"><i class="fas
+                <!--* USER-->
+                <a href="login.html" class="user"> <i class="fas fa-user"></i></a>
+                <!--* cart-icon-->
+                <a href="#" class="shop"><i class="fas
                             fa-shopping-cart">
-                            <span class="number-cart-product">0</span>
-                        </i>
-                    </a>
-
-                </div>
-            </nav>
-
-
-            <!--! MENU BAR-->
-
-
-            <!--! SEARCH BAR -->
-            <div class="search-bar">
-                <!-- * search input-->
-                <div class="search-input">
-                    <input class="ser" type="text"
-                        placeholder="Search">
-                    <a href="#" class="search-cancel">
-                        <i class="fas fa-times"></i>
-                    </a>
-                </div>
-
-            </div>
-
-
-            <!--! LOGIN AND SIGN UP FORM-->
-            <div class="form">
-                <!--! LOGIN-->
-                <div class="login-form" id="login-form">
-
-                    <a href="#">
-                        <div class="form-cancel">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </a>
-                    <strong>Log In</strong>
-                    <form action="">
-                        <input type="email"
-                            placeholder="Example@email.com"
-                            name="email">
-                        <input type="password" placeholder="Password"
-                            name="email">
-
-                        <!--submit-->
-                        <input type="submit" value="Log In">
-                    </form>
-                    <div class="form-btns">
-                        <a href="#" class="forget"> Forget Your
-                            Password?</a>
-                        <a href="#" class="sign-up-btn">Create Account</a>
-                    </div>
-                </div>
-
-
-                <!--! SIGN UP-->
-                <div class="sign-up-form" id="sign-up-form">
-
-                    <a href="#">
-                        <div class="form-cancel">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </a>
-                    <strong>Sign up</strong>
-                    <form action="">
-                        <input type="text" placeholder="Full name"
-                            name="email">
-                        <input type="email"
-                            placeholder="Example@email.com"
-                            name="email">
-                        <input type="password" placeholder="Password"
-                            name="email">
-
-                        <!--submit-->
-                        <input type="submit" value="Sign up">
-                    </form>
-                    <div class="form-btns">
-                        <a href="#" class="already"> Already have
-                            account?</a>
-                    </div>
-                </div>
-            </div>
-            <div class="full-slider-box">
-
-                <div class="f-slide-1">
-
-                </div>
-
-                <div class="f-slide-2">
-
-                </div>
-
-
-                <div class="f-slide-3">
-
-                </div>
-
-                <div class="f-slide-4">
-
-                </div>
-                <div class="slider-text-container">
-                    <div class="f-slide-text">
-                        <span>Limited offer</span>
-                        <strong>90% off <br />
-                            With <font>promo code</font>
-                        </strong>
-                        <a href="#" class="f-slider-btn"> Shop Now
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="feature-heading">
-                <h2>Best for today </h2>
-            </div>
-
-            <!-- ! GRID SYSTEM -->
-            <section class="feature-box">
-                <a href="#">
-                    <h3 class="category">Clothes for Men and Women
-                        <span class="sale-label">Up to 45% </span>
-                    </h3>
-                    <!--! SALE LABEL-->
-
+                        <span class="number-cart-product">0</span>
+                    </i>
                 </a>
 
-                <div class="product-container">
-
-                    <a href="">
-                        <article class="product">
-                            <div class="hd">
-                                <span>-14%</span>
-                            </div>
-                            <img src="images/p-2.png" alt="">
-                            <strong>Tshirt yel</strong>
-                            <h3>1200 DA</h3>
-                        </article>
-                    </a>
+            </div>
+    </nav>
 
 
-                    <a href="">
-                        <article class="product">
-                            <div class="hd">
-                                <span>-45%</span>
-                            </div>
-                            <img src="images/p-3.png" alt="">
-                            <strong>Tshirt yel</strong>
-                            <h3>1200 DA</h3>
-                        </article>
-                    </a>
+    <!--! MENU BAR-->
+
+    <section class="shop-menu" id="target">
+        <div class="cont">
+
+            <div class="sho list">
+                <strong>Shop By</strong>
+                <ul>
+                    <li><a href="#">Catego</a></li>
+                    <li><a href="#">Look</a></li>
+                    <li><a href="#">Client</a></li>
+                    <li><a href="#">Hard</a></li>
+                    <li><a href="#">Selecin</a></li>
+                    <li><a href="#">Dark</a></li>
+                </ul>
+            </div>
+
+            <div class="barnd list">
+                <strong>Brands</strong>
+                <ul>
+                    <li><a href="#">Rap data</a></li>
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Take frr</a></li>
+                    <li><a href="#">Hand segmanr</a></li>
+                    <li><a href="#">There loose </a></li>
+                    <li><a href="#">Take fake</a></li>
+                    <li><a href="#">There valide </a></li>
+                    <li><a href="#">remind come </a></li>
+                    <li><a href="#">How for</a></li>
+                    <li><a href="#">Catego right</a></li>
+                </ul>
+            </div>
 
 
-                    <a href="">
-                        <article class="product">
-                            <div class="hd">
-                                <span>-30%</span>
-                            </div>
-                            <img src="images/p-4.png" alt="">
-                            <strong>Tshirt yel</strong>
-                            <h3>1200 DA</h3>
-                        </article>
-                    </a>
+            <div class="categories list">
+                <strong>Categories</strong>
+                <ul>
+                    <li><a href="#">There boea</a></li>
+                    <li><a href="#">remind ada</a></li>
+                    <li><a href="#">How yor</a></li>
+                    <li><a href="#">Catego teke </a></li>
+                    <li><a href="#">Mind whole </a></li>
+                    <li><a href="#">Rap data</a></li>
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Take frr</a></li>
+                    <li><a href="#">Hand segmanr</a></li>
+                    <li><a href="#">There loose </a></li>
+                </ul>
+            </div>
 
 
-                    <a href="">
-                        <article class="product">
-                            <div class="hd">
-                                <span>-12%</span>
-                            </div>
-                            <img src="images/p-5.png" alt="">
-                            <strong>Tshirt yel</strong>
-                            <h3>1200 DA</h3>
-                        </article>
-                    </a>
+            <div class="barnd list">
+                <strong>Brands</strong>
+                <ul>
+                    <li><a href="#">Take fake</a></li>
+                    <li><a href="#">There valide </a></li>
+                    <li><a href="#">remind come </a></li>
+                    <li><a href="#">How for</a></li>
+                    <li><a href="#">Catego right</a></li>
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Rap data</a></li>
+                    <li><a href="#">First</a></li>
+                    <li><a href="#">Take frr</a></li>
+                    <li><a href="#">Hand segmanr</a></li>
+                    <li><a href="#">There loose </a></li>
+                </ul>
+            </div>
 
 
-
-                    <a href="">
-                        <article class="product">
-                            <div class="hd">
-                                <span>-43%</span>
-                            </div>
-                            <img src="images/p-6.png" alt="">
-                            <strong>Tshirt yel</strong>
-                            <h3>1200 DA</h3>
-                        </article>
-                    </a>
+        </div>
+    </section>
 
 
+    <!--! SEARCH BAR -->
+    <div class="search-bar">
+        <!-- * search input-->
+        <div class="search-input">
+            <input class="ser" type="text" placeholder="Search">
+            <a href="#" class="search-cancel">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
 
-                    <a href="">
-                        <article class="product">
-                            <div class="hd">
-                                <span>-23%</span>
-                            </div>
-                            <img src="images/p-7.png" alt="">
-                            <strong>Tshirt yel</strong>
-                            <h3>1200 DA</h3>
-                        </article>
-                    </a>
-
-
-
-                    <a href="">
-                        <article class="product">
-                            <div class="hd">
-                                <span>-12%</span>
-                            </div>
-                            <img src="images/p-8.png" alt="">
-                            <strong>Tshirt yel</strong>
-                            <h3>1200 DA</h3>
-                        </article>
-                    </a>
+    </div>
 
 
+    <!--! LOGIN AND SIGN UP FORM-->
+  
+    <div class="full-slider-box">
 
-                    <a href="">
-                        <article class="product">
-                            <div class="hd">
-                                <span>-15%</span>
-                            </div>
-                            <img src="images/p-7.png" alt="">
-                            <strong>Tshirt yel</strong>
-                            <h3>1200 DA</h3>
-                        </article>
-                    </a>
-                </div>
-            </section>
+        <div class="f-slide-1">
+
+        </div>
+
+        <div class="f-slide-2">
+
+        </div>
 
 
+        <div class="f-slide-3">
 
-            <footer>
-                <div class="cont">
-                    <div class="footer__logo">
-                        <a href="#">
-                            <img src="images/logo.png" alt="logo">
-                        </a>
+        </div>
+
+        <div class="f-slide-4">
+
+        </div>
+        <div class="slider-text-container">
+            <div class="f-slide-text">
+                <span>Limited offer</span>
+                <strong>90% off <br />
+                    With <font>promo code</font>
+                </strong>
+                <a href="#" class="f-slider-btn"> Shop Now
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="feature-heading">
+        <h2>Best for today </h2>
+    </div>
+
+
+    <section class="feature-box">
+        <a href="#">
+            <h3 class="category">Clothes for Men and Women
+                <span class="sale-label">Up to 45% </span>
+            </h3>
+        </a>
+
+        <div class="product-container">
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-14%</span>
                     </div>
-                    <div class="footer_social">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                width="20" height="20">
-                                <title>Facebook</title>
-                                <path fill="#3F4045" d="M18.896
+                    <img src="images/p-2.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-45%</span>
+                    </div>
+                    <img src="images/p-3.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-30%</span>
+                    </div>
+                    <img src="images/p-4.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-12%</span>
+                    </div>
+                    <img src="images/p-5.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-43%</span>
+                    </div>
+                    <img src="images/p-6.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-23%</span>
+                    </div>
+                    <img src="images/p-7.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-12%</span>
+                    </div>
+                    <img src="images/p-8.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-15%</span>
+                    </div>
+                    <img src="images/p-7.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+        </div>
+
+        <a href="#">
+            <h3 class="category">Phone and tablets
+                <span class="sale-label">Up to 45% </span>
+            </h3>
+        </a>
+        <div class="product-container">
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-14%</span>
+                    </div>
+                    <img src="images/p-2.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-45%</span>
+                    </div>
+                    <img src="images/p-3.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-30%</span>
+                    </div>
+                    <img src="images/p-4.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-12%</span>
+                    </div>
+                    <img src="images/p-5.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-43%</span>
+                    </div>
+                    <img src="images/p-6.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-23%</span>
+                    </div>
+                    <img src="images/p-7.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-12%</span>
+                    </div>
+                    <img src="images/p-8.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-15%</span>
+                    </div>
+                    <img src="images/p-7.png" alt="">
+                    <strong>Tshirt yel</strong>
+                    <h3>1200 DA</h3>
+                </article>
+            </a>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="cont">
+            <div class="footer__logo">
+                <a href="#">
+                    <img src="images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="footer_social">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <title>Facebook</title>
+                        <path fill="#3F4045" d="M18.896
                                     0H1.104C.494 0 0 .494 0
                                     1.104v17.793C0 19.506.494 20 1.104
                                     20h9.58v-7.745H8.076V9.237h2.606V7.01c0-2.583
@@ -301,14 +422,12 @@
                                     1.102-.494
                                     1.102-1.104V1.104C20 .494 19.506 0
                                     18.896 0z" />
-                                </svg>
-                            </a>
-                            <a href="#">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="21" height="20">
-                                    <title>YouTube</title>
-                                    <path fill="#3F4045" d="M10.333
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                        <title>YouTube</title>
+                        <path fill="#3F4045" d="M10.333
                                         0c-5.522 0-10 4.478-10
                                         10 0 5.523 4.478 10 10 10
                                         5.523 0
@@ -326,15 +445,12 @@
                                         3.947-2.133
                                         4.077zM8.667 8.048l4.097
                                         1.949-4.097 1.955V8.048z" />
-                                    </svg>
-                                </a>
-                                <a href="#">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="21" height="18">
-                                        <title>Twitter</title>
-                                        <path fill="#3F4045"
-                                            d="M20.667
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18">
+                        <title>Twitter</title>
+                        <path fill="#3F4045" d="M20.667
                                             2.797a8.192 8.192 0
                                             01-2.357.646 4.11 4.11 0
                                             001.804-2.27 8.22 8.22 0
@@ -357,15 +473,12 @@
                                             11.662-12.205a8.354 8.354
                                             0
                                             002.048-2.124z" />
-                                        </svg>
-                                    </a>
-                                    <a href="#">
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="20" height="20">
-                                            <title>Pinterest</title>
-                                            <path fill="#3F4045"
-                                                d="M10
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                        <title>Pinterest</title>
+                        <path fill="#3F4045" d="M10
                                                 0C4.478 0 0 4.477 0
                                                 10c0 4.237 2.636 7.855
                                                 6.356
@@ -403,16 +516,12 @@
                                                 0 10-4.477
                                                 10-10S15.522 0
                                                 10 0z" />
-                                            </svg>
-                                        </a>
-                                        <a href="#">
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="21"
-                                                height="20">
-                                                <title>Instagram</title>
-                                                <path fill="#3F4045"
-                                                    d="M10.333
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20">
+                        <title>Instagram</title>
+                        <path fill="#3F4045" d="M10.333
                                                     1.802c2.67
                                                     0 2.987.01
                                                     4.042.059
@@ -469,100 +578,67 @@
                                                     1.2 0 10-.001 2.4
                                                     1.2
                                                     1.2 0 000-2.4z" />
-                                                </svg>
-                                            </a>
-                                        </div>
-                                        <div class="footer__links
+                    </svg>
+                </a>
+            </div>
+            <div class="footer__links
                                             coll-1">
-                                            <a href="#">About us</a>
-                                            <a href="#">contact</a>
-                                            <a href="#">Blog</a>
-                                        </div>
-                                        <div class="footer__links
+                <a href="#">About us</a>
+                <a href="#">contact</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="footer__links
                                             coll-2">
-                                            <a href="#">career</a>
-                                            <a href="#">support</a>
-                                            <a href="#">privacy policy</a>
-                                        </div>
+                <a href="#">career</a>
+                <a href="#">support</a>
+                <a href="#">privacy policy</a>
+            </div>
 
 
-                                        <div class="contact">
-                                            <a href="#">contact</a>
-                                        </div>
+            <div class="contact">
+                <a href="#">contact</a>
+            </div>
 
-                                        <div
-                                            class="footer__copyright">
-                                            &copy; AbdouSHop. All
-                                            Right
-                                            Reserved
-                                        </div>
-                                    </div>
-                                </footer>
-
+            <div class="footer__copyright">
+                &copy; AbdouSHop. All
+                Right
+                Reserved
+            </div>
+        </div>
+    </footer>
 
 
-                                <script
-                                    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-                                <script type="text/javascript">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+ 
         $(document).ready(function () {
-            /* !SEARCH BAR */
-
             $('.search').click(function () {
-                $('.search-bar').toggleClass('search-bar-active');
-                $('.form').addClass('form-only');
+                    activeSearch();
             });
-
             $('.form').click(function () {
-                if ($('.search-bar').hasClass('search-bar-active')) {
-                    $('.search-bar').removeClass('search-bar-active');
-                    $(this).removeClass('form-only');
-                }
-            })
+                 if ($('.search-bar').hasClass('search-bar-active')) {
+                        removeSearch();
+                    }
+                 if ($('.shop-menu').hasClass('showw')) {
+                        removeShopMenu();
+                    }
+                });
             $('.search-cancel').click(function () {
-
                 $('.ser').val("");
             })
-
-            /* !LOGIN - SIGN UP */
-
-            $('.user').click(function () {
-                $('.form').addClass('form-active');
-            });
-
-
-            /* Close */
-
-            $('.form-cancel').click(function () {
-                $('.form').removeClass('form-active');
-                $('.form').removeClass('sign-active');
-
-            });
-
-
-            $('.sign-up-btn').click(function () {
-                $('.form').addClass('sign-active');
-            });
-
-            $('.already').click(function () {
-
-                $('.form').removeClass('sign-active');
-                $('.form').addClass('form-active');
-            });
-
+            $('#SHOP').click(function () {
+               activeShopMenu();
+            })
+            $('.form-cancel').click(removeForm);
             $('.f-slider-btn').click(function () {
 
             })
+            swichImages();
+        })
 
-            let images = ['/images/Slider_01.jpg', '/images/Slider_02.jpg', '/images/Slider_03.jpg',
-                '/images/Slider_04.jpg'
-            ];
-
-            // swichImages();
-
-            function swichImages() {
-
-
-
+        function swichImages() {
                 setTimeout(function () {
                     $('.f-slide-1').css(
                         "transform", "translateX(500%)",
@@ -595,8 +671,27 @@
                     ).delay(3000);
                 }, 5000)
             }
-        })
+        function activeSearch() {
+                $('.search-bar').addClass('search-bar-active');
+                $('.form').addClass('form-only');
+            }
+        function removeSearch() {
+                $('.search-bar').removeClass('search-bar-active');
+                $('.form').removeClass('form-only');
+            }
+        function removeShopMenu() {
+                $('.form').removeClass('form-only');
+                $('.shop-menu').removeClass('showw');
+            }
+        function activeShopMenu(){
+                $('.shop-menu').addClass('showw');
+                $('.form').addClass('form-only');
+            }
+        function removeForm() {
+                $('.form').removeClass('form-active');
+                $('.form').removeClass('sign-active');
+            }
     </script>
-                            </body>
+</body>
 
-                        </html>
+</html>
