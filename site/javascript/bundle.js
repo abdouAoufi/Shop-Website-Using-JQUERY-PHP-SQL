@@ -30,7 +30,7 @@
         const sideBar = $(".sidebar");
         let isSideBarOpen = false;
         let isPictureDisplayerOpen = false;
-        let url = "data/data.json";
+        let url = "data/data.json"; // ! JSON SOURCE 
 
         $(document).ready(function () {
 
@@ -52,7 +52,7 @@
         });
 
         $.ajax({
-            url: "data/data.json",
+            url: "data/data.json", // ! URL
             method: "GET",
             dataType: "json"
         }).done(displayData);
