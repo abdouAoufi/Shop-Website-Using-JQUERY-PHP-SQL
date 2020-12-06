@@ -865,13 +865,36 @@ a {
           justify-content: center;
 }
 
+@media (max-width: 320px) {
+  .search-bar .search-input {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 419px) {
+  .search-bar .search-input {
+    margin-top: 10px;
+  }
+}
+
 .search-bar .search-input input {
   width: 100%;
   padding: 0px 20px;
   border: none;
   outline: none;
   font-size: 2rem;
-  margin: 20px;
+}
+
+@media (max-width: 320px) {
+  .search-bar .search-input input {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 419px) {
+  .search-bar .search-input input {
+    font-size: 1rem;
+  }
 }
 
 .search-bar .search-input .search-cancel {

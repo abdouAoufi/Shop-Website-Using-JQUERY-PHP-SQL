@@ -61,13 +61,30 @@ a {
         margin-top: 20px;
         justify-content: center;
 
+
+        @include media ('<=phone') {
+            margin-top: 10px;
+        }
+
+        @include media ('>phone', '<420px') {
+            margin-top: 10px;
+        }
+
         input {
             width: 100%;
             padding: 0px 20px;
             border: none;
             outline: none;
             font-size: 2rem;
-            margin: 20px;
+            // margin: 20px;
+
+            @include media ('<=phone') {
+                font-size: 1rem;
+            }
+
+            @include media ('>phone', '<420px') {
+                font-size: 1rem;
+            }
         }
 
         .search-cancel {
