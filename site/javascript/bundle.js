@@ -197,9 +197,7 @@
                 showImage();
             });
 
-            $(".product-to-diplay ").on("swipeleft", function () {
-                alert();
-            });
+           
 
         }
 
