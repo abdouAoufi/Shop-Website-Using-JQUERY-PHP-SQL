@@ -1,110 +1,74 @@
+var isSearchOpen = false;
 $(document).ready(function () {
-    
-    $('#SHOP').click(function () {
-        activeShopMenu();
-    })
-    $('.form-cancel').click(removeForm);
-    $('.f-slider-btn').click(function () {
 
+
+    $('.search').click(function () {
+        activeSearch();
     });
-    $('.shop').click(displayBag);
-    $('.btn-container').click(function(){
-        $('.shopping-bag').removeClass('show-bag');
-        $('.form').removeClass('form-only');
-    })
-    // getDataFromJson();
-    // swichImages();
-})
+    $('.form').click(function () {
+        if ($('.search-bar').hasClass('search-bar-active')) {
+            removeSearch();
+        }
+    });
 
-function swichImages() {
+});
+document.getElementById("ssearch-cancel").addEventListener("click", function (event) {
+    event.preventDefault();
+    let start = document.getElementById("ttarget").value;
+    var params = "name=" + start;
+    var XHR = new XMLHttpRequest();
+    XHR.open("POST", 'backend/php/search.php', true);
+    XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    XHR.onload = function () {
+        let Result = (JSON.parse(this.responseText));
+        $('.product-container').html("");
+        Result.forEach(function (full, index) {
+            displayDataa(full, index);
+        })
+        removeSearch();
 
-    setTimeout(function () {
-        $('.f-slide-2').css(
-            "transform", "translateX(0)",
-        ).delay(3000);
-    }, 2000)
-
-
-    setTimeout(function () {
-        $('.f-slide-3').css(
-            "transform", "translateX(0)",
-        ).delay(3000);
-    }, 3000)
-
-    setTimeout(function () {
-        $('.f-slide-4').css(
-            "transform", "translateX(0)",
-        ).delay(3000);
-    }, 4000)
+    }
+    XHR.send(params);
+});
 
 
-  
-}
-
-
-
-function removeShopMenu() {
-    $('.form').removeClass('form-only');
-    $('.shop-menu').removeClass('showw');
-}
-
-function activeShopMenu() {
-    $('.shop-menu').addClass('showw');
-    $('.form').addClass('form-only');
-}
-
-function removeForm() {
-    $('.form').removeClass('form-active');
-    $('.form').removeClass('sign-active');
-}
-
-function displayBag(){
-    $('.form').addClass('form-only');
-    $('.shopping-bag').addClass('show-bag');
-}
-
-function getDataFromJson(){
-    $.ajax({
-    method : 'GET',
-    url : "data/data.json",
-    dataType : "json",
-}).done(function(data){
-    $.each(data , function displayNames(id , name) {
-        displayData(name , id)
-    })
-})
-}
-let postCounter = 0 ;
-
-function displayData( full , id){
-    
+function displayDataa(full, index) {
+    img = JSON.parse(full.img);
     product = `<a href="#">
-    <article class="producte-home" id=${full.postId} >
-    
-        <div class="hd">
-            <span>-14%</span>
-        </div>
-        <img src="${full.img[0]}" alt="">
-        <div class="info">
-            <h6>${full.title}</h6>
-            <strong>${full.price} DA</strong>
-        </div>
-    </article>
+<article class="producte-home" id=${full.id} >
+
+<div class="hd">
+<span>-14%</span>
+</div>
+<img src="${img[0]}" alt="product">
+<div class="info">
+<h6>${full.title}</h6>
+<strong>${full.price} DA</strong>
+</div>
+</article>
 </a>`;
-if(postCounter < 8){
     $('.product-container').append(product);
-    postCounter++;
-}
+    $(`#${full.id}`).click(function (event) {
+        event.preventDefault();
+        let start = full.id;
+        var params = "name=" + start;
+        var XHR = new XMLHttpRequest();
+        XHR.open("POST", 'backend/php/appendhtml.php', true);
+        XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        XHR.onload = function () {
+            let Result = (JSON.parse(this.responseText));
+            appendHtml(Result[0]);
+        }
+        XHR.send(params);
+    });
 
-$(`#${id}`).click(function (){
-    appendHtml(full);
-})
- 
+};
 
-}
-let isPictureDisplayerOpen = false ;
+
 
 function appendHtml(data) {
+    let img = JSON.parse(data.img);
+    let profile = JSON.parse(data.profile);
     $('body').append(
         ` <section class="displayer full-page">
            <div class="display-content" id="pro">
@@ -134,8 +98,8 @@ function appendHtml(data) {
                                    <img src="https://images.unsplash.com/photo-1604919912564-6480b79b1c11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=80"
                                        alt="" height="60">
                                    <div class="dis-basic-info">
-                                       <h5 class="name">${data.profile.name}</h5>
-                                       <h5 class="wilaya">${data.profile.wilaya}</h5>
+                                       <h5 class="name"></h5>
+                                       <h5 class="wilaya"></h5>
                                    </div>
                                </div>
                                <button class="others"><i class="fas
@@ -156,7 +120,7 @@ function appendHtml(data) {
                </article>
 
                <div class="pictures-container">
-                   <img class="image-show" src="${data.img[0]}" alt="galaxy" title="${data.title}">
+                   <img class="image-show" src="${img[0]}" alt="galaxy" title="${data.title}">
                   <i class = "fas fa-chevron-right next-image change-image" > </i>
                   <i class = "fas fa-chevron-left pre-image change-image" > </i>
                </div>
@@ -164,32 +128,31 @@ function appendHtml(data) {
        </section>
 
        `);
-
-       $('.dis-see').click(function () {
+    $('.dis-see').click(function () {
         showImage();
     });
 
-       let indexImg = 0;
-            $('.next-image').click(function name(params) {
-                if (indexImg < data.img.length - 1) {
-                    ++indexImg;
-                    $(".image-show").attr("src", data.img[indexImg])
-                }
-            });
+    let indexImg = 0;
+    $('.next-image').click(function name(params) {
+        if (indexImg < img.length - 1) {
+            ++indexImg;
+            $(".image-show").attr("src", img[indexImg])
+        }
+    });
 
-            $('.pre-image').click(function name(params) {
-                if (indexImg > 0 || indexImg > 1) {
-                    --indexImg;
-                    $(".image-show").attr("src", data.img[indexImg])
-                }
-            })
-       $(".closee").click(function () {
+    $('.pre-image').click(function name(params) {
+        if (indexImg > 0 || indexImg > 1) {
+            --indexImg;
+            $(".image-show").attr("src", img[indexImg])
+        }
+    })
+    $(".closee").click(function () {
         if (isPictureDisplayerOpen) {
             hideImage();
         } else {
             hideFull();
         }
-   });
+    });
 
 }
 
@@ -214,4 +177,19 @@ function hideFull() {
     $(".displayer").fadeOut(500);
 }
 
- 
+
+
+
+
+
+function activeSearch() {
+    isSearchOpen = true;
+    $('.search-bar').addClass('search-bar-active');
+    $('.form').addClass('form-only');
+}
+
+function removeSearch() {
+    isSearchOpen = false;
+    $('.search-bar').removeClass('search-bar-active');
+    $('.form').removeClass('form-only');
+}

@@ -139,9 +139,9 @@ footer {
 
     .contact {
         grid-area: cta;
-        grid-area: cta;
-        margin-top: 1rem;
+        // margin-top: 1rem;
         padding: 0;
+
 
         @include media(">phone", "<=tablet") {
             display: block;
@@ -158,8 +158,9 @@ footer {
             border-radius: 4px;
             color: #0b9d8a;
             display: block;
+            height: 80px !important;
             padding: 0.4rem 0.8rem;
-            border: 2px solid #0b9d8a;
+            // border: 2px solid #0b9d8a;
         }
     }
 
