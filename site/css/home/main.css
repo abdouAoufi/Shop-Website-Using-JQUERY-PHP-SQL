@@ -1119,6 +1119,10 @@ nav {
   color: #F7866F;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'poppins';
   margin: 0;

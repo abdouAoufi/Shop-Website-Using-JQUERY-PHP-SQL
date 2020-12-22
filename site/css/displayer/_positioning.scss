@@ -1,8 +1,6 @@
 @import 'mixins';
 
-body{
-    background-color: rgba($color: #000000, $alpha: 0.25);
-}
+
 
 .big{
     position: fixed;
@@ -10,9 +8,11 @@ body{
     right: 0;
     top: 0;
     z-index: 10;
+}z
+.big .show-big{
+    display: block;
 }
 .big-container {
-    // padding: 1rem;
     min-width: 95vw;
     height: 92vh;
     margin: auto;
@@ -28,15 +28,14 @@ body{
         display: block;
         overflow-y: auto;
         height: auto;
-
     }
 
     .close-fun {
         position: absolute;
-        right: 5px;
-        top:5px;
-        font-size: 2rem;
-        color: #ca3e47;
+        right: 12px;
+        top:0px;
+        font-size: 2.5rem;
+        color: #c4c4c4;
         opacity: 0.5;
         cursor: pointer;
         z-index: 4;
@@ -82,9 +81,10 @@ body{
 .seller-container{
     margin-top: 0.5rem;
     border-radius: .5rem;
-    background-color:rgb(255, 253, 253);
+    background-color:rgba(238, 238, 238, 0.699);
     box-shadow: 3px 3px 7px rgba($color: #000000, $alpha: 0.15);
     .profile-pic{
+        // border: 1px solid magenta;
         margin-left: .8rem;
         padding: .5rem;
         img{
@@ -118,7 +118,7 @@ body{
             .borders{
                 width: 100px;
                 height: 1px;
-                background-color: #EEE;
+                background-color: #c4c4c4;
             }
             #social{
                 font-size: 0.8rem;
@@ -168,7 +168,11 @@ body{
         border-radius: 7px;
         background-color: #EEE;
         color: #978e8e;
+        transition: 240ms ease-in-out all;
         cursor: pointer;
+        &:hover{
+            color: #776f6f;
+        }
     }
     .previous{
         left: 0.2rem;

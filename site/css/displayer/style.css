@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
-body {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
 .big {
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   z-index: 10;
+}
+
+z
+.big .show-big {
+  display: block;
 }
 
 .big-container {
@@ -35,10 +36,10 @@ body {
 
 .big-container .close-fun {
   position: absolute;
-  right: 5px;
-  top: 5px;
-  font-size: 2rem;
-  color: #ca3e47;
+  right: 12px;
+  top: 0px;
+  font-size: 2.5rem;
+  color: #c4c4c4;
   opacity: 0.5;
   cursor: pointer;
   z-index: 4;
@@ -89,7 +90,7 @@ body {
 .seller-container {
   margin-top: 0.5rem;
   border-radius: .5rem;
-  background-color: #fffdfd;
+  background-color: rgba(238, 238, 238, 0.699);
   -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15);
           box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15);
 }
@@ -140,7 +141,7 @@ body {
 .seller-container .second-row .s-c .borders {
   width: 100px;
   height: 1px;
-  background-color: #EEE;
+  background-color: #c4c4c4;
 }
 
 .seller-container .second-row .s-c #social {
@@ -198,7 +199,13 @@ body {
   border-radius: 7px;
   background-color: #EEE;
   color: #978e8e;
+  -webkit-transition: 240ms ease-in-out all;
+  transition: 240ms ease-in-out all;
   cursor: pointer;
+}
+
+.image-container .mod:hover {
+  color: #776f6f;
 }
 
 .image-container .previous {
