@@ -1,3 +1,4 @@
+
 var isSearchOpen = false;
 $(document).ready(function () {
 
@@ -14,21 +15,25 @@ $(document).ready(function () {
 });
 document.getElementById("ssearch-cancel").addEventListener("click", function (event) {
     event.preventDefault();
-    let start = document.getElementById("ttarget").value;
-    var params = "name=" + start;
-    var XHR = new XMLHttpRequest();
-    XHR.open("POST", 'backend/php/search.php', true);
-    XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    XHR.onload = function () {
-        let Result = (JSON.parse(this.responseText));
-        $('.product-container').html("");
-        Result.forEach(function (full, index) {
-            displayDataa(full, index);
-        })
-        removeSearch();
+    var text = $("#ttarget").val();
+    var data = {
+        "name": text
+    };
+    $.ajax({
+        url: 'backend/php/search.php',
+        type: "POST",
+        dataType: "json",
+        data: data,
+        success: function (data) {
+            $(".product-container").html("");
+            data.forEach(function (full, index) {
+                displayDataa(full, index);
+            });
+        }
 
-    }
-    XHR.send(params);
+    }).done(function(){
+        removeSearch();
+    })
 });
 
 
@@ -52,14 +57,20 @@ function displayDataa(full, index) {
         event.preventDefault();
         let start = full.id;
         var params = "name=" + start;
-        var XHR = new XMLHttpRequest();
-        XHR.open("POST", 'backend/php/appendhtml.php', true);
-        XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        XHR.onload = function () {
-            let Result = (JSON.parse(this.responseText));
-            appendHtml(Result[0]);
-        }
-        XHR.send(params);
+
+        $.ajax({
+            url: 'backend/php/appendhtml.php',
+            type: "POST",
+            dataType: "json",
+            data: params,
+            success: function (data) {
+                appendNew(data[0]);
+            }
+
+        }).done(function(){
+
+        })
+
     });
 
 };
@@ -70,7 +81,9 @@ function appendHtml(data) {
     let img = JSON.parse(data.img);
     let profile = JSON.parse(data.profile);
     $('body').append(
-        ` <section class="displayer full-page">
+        ` 
+        
+        <section class="displayer full-page">
            <div class="display-content" id="pro">
                <div class="closee"><i class="fas fa-times"></i></div>
                <article class="product-to-diplay">
@@ -192,4 +205,109 @@ function removeSearch() {
     isSearchOpen = false;
     $('.search-bar').removeClass('search-bar-active');
     $('.form').removeClass('form-only');
+}
+
+function appendNew(data){
+  let img = JSON.parse(data.img);
+  let profile = JSON.parse(data.profile);
+    let element = `
+    <section class="big">
+    <div class="big-container">
+      <div class="close-fun">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="details-txt">
+        <span class="text importantt" id="pr-name">${data.title} </span>
+        <span class="text importantt" id="pr-price">
+          Price :
+          <span>${data.price} DA</span>
+          <span id="state"> [ ${data.stateSell} ] </span>
+        </span>
+
+        <span class="text importantt" id="pr-wilaya">
+          Wilaya :
+          <span>${data.place}</span>
+          <span id="exact">  </span>
+        </span>
+
+        <span class="text importantt" id="pr-phone">
+          Phone :
+          <span>${data.phonePost}</span>
+        </span>
+
+        <a href="#">
+          <span class="text less-important d-b" id="pr-category"
+          ${data.category}
+          </span>
+        </a>
+
+        <span id="pr-post" class="d-b text less-important">
+          Posted on :
+          <span>${data.hourPost}</span>
+        </span>
+
+        <span class="d-b text less-important text" id="pr-condition">
+          Condition : <span>Used - fair</span>
+        </span>
+
+        <span id="pr-details" class="d-b less-important"> Details : </span>
+
+        <p id="pr-desc">
+          ${data.descreption} 
+        </p>
+
+        <span id="seller-zone " class="text"> Seller information : </span>
+        <div class="seller-container">
+          <div class="first-row">
+            <div class="profile-pic">
+              <img src="style/i-1 (3).jpg" alt="" height="60" />
+            </div>
+            <div class="info-basic">
+              <span id="name-pr" class="text"> Sara </span>
+              <span id="user-name-pr" class="d-b"> @Sara_tech12 </span>
+            </div>
+          </div>
+          <div class="second-row">
+              <div class="s-c">
+                    <div class="borders"></div>
+                    <span id="social"> Social network </span>
+                    <div class="borders"></div>
+              </div>
+
+            <div class="social-media-container">
+              <div class="item">
+                <img src="images/facebook.svg" alt="">
+                <span>Facebook</span>
+              </div>
+
+              <div class="item">
+                <img src="images/instagram.svg" alt="">
+                <span>Instagram</span>
+              </div>
+
+              <div class="item">
+                <img src="images/youtube.svg" alt="">
+                <span>Youtube</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="image-container">
+        <div class="previous mod">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+
+        <img src="${img[0]}" alt="" srcset="" />
+
+        <div class="next mod">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+</section>
+    `;
+    $('body').append(element);
+    $('.form').addClass('form-only');
 }

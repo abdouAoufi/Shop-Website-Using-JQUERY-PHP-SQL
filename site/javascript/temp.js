@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     $('#SHOP').click(function () {
         activeShopMenu();
     })
@@ -8,11 +8,11 @@ $(document).ready(function () {
 
     });
     $('.shop').click(displayBag);
-    $('.btn-container').click(function(){
+    $('.btn-container').click(function () {
         $('.shopping-bag').removeClass('show-bag');
         $('.form').removeClass('form-only');
     })
-    // getDataFromJson();
+    getDataFromJson();
     // swichImages();
 })
 
@@ -38,7 +38,7 @@ function swichImages() {
     }, 4000)
 
 
-  
+
 }
 
 
@@ -58,26 +58,26 @@ function removeForm() {
     $('.form').removeClass('sign-active');
 }
 
-function displayBag(){
+function displayBag() {
     $('.form').addClass('form-only');
     $('.shopping-bag').addClass('show-bag');
 }
 
-function getDataFromJson(){
+function getDataFromJson() {
     $.ajax({
-    method : 'GET',
-    url : "data/data.json",
-    dataType : "json",
-}).done(function(data){
-    $.each(data , function displayNames(id , name) {
-        displayData(name , id)
+        method: 'GET',
+        url: "data/data.json",
+        dataType: "json",
+    }).done(function (data) {
+        $.each(data, function displayNames(id, name) {
+            displayData(name, id)
+        })
     })
-})
 }
-let postCounter = 0 ;
+let postCounter = 0;
 
-function displayData( full , id){
-    
+function displayData(full, id) {
+
     product = `<a href="#">
     <article class="producte-home" id=${full.postId} >
     
@@ -91,18 +91,18 @@ function displayData( full , id){
         </div>
     </article>
 </a>`;
-if(postCounter < 8){
-    $('.product-container').append(product);
-    postCounter++;
-}
+    
+        $('.product-container').append(product);
+        postCounter++;
+    
 
-$(`#${id}`).click(function (){
-    appendHtml(full);
-})
- 
+    $(`#${id}`).click(function () {
+        appendHtml(full);
+    })
+
 
 }
-let isPictureDisplayerOpen = false ;
+let isPictureDisplayerOpen = false;
 
 function appendHtml(data) {
     $('body').append(
@@ -165,31 +165,31 @@ function appendHtml(data) {
 
        `);
 
-       $('.dis-see').click(function () {
+    $('.dis-see').click(function () {
         showImage();
     });
 
-       let indexImg = 0;
-            $('.next-image').click(function name(params) {
-                if (indexImg < data.img.length - 1) {
-                    ++indexImg;
-                    $(".image-show").attr("src", data.img[indexImg])
-                }
-            });
+    let indexImg = 0;
+    $('.next-image').click(function name(params) {
+        if (indexImg < data.img.length - 1) {
+            ++indexImg;
+            $(".image-show").attr("src", data.img[indexImg])
+        }
+    });
 
-            $('.pre-image').click(function name(params) {
-                if (indexImg > 0 || indexImg > 1) {
-                    --indexImg;
-                    $(".image-show").attr("src", data.img[indexImg])
-                }
-            })
-       $(".closee").click(function () {
+    $('.pre-image').click(function name(params) {
+        if (indexImg > 0 || indexImg > 1) {
+            --indexImg;
+            $(".image-show").attr("src", data.img[indexImg])
+        }
+    })
+    $(".closee").click(function () {
         if (isPictureDisplayerOpen) {
             hideImage();
         } else {
             hideFull();
         }
-   });
+    });
 
 }
 
@@ -213,5 +213,3 @@ function hideImage() {
 function hideFull() {
     $(".displayer").fadeOut(500);
 }
-
- 
