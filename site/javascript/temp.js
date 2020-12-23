@@ -12,9 +12,8 @@ $(document).ready(function () {
         $('.shopping-bag').removeClass('show-bag');
         $('.form').removeClass('form-only');
     })
-
     // swichImages();
-})
+});
 
 function swichImages() {
 
@@ -36,9 +35,6 @@ function swichImages() {
             "transform", "translateX(0)",
         ).delay(3000);
     }, 4000)
-
-
-
 }
 
 
