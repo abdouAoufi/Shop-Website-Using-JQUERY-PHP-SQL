@@ -49,17 +49,31 @@
                 </div>
 
                 <div class="login-form">
-                    <strong>Member Login</strong>
+                    <strong id="title"> Member Login</strong>
 
-                    <form action="home.html">
+                    <form action="#">
                         <div class="load">
-                            <i class="fas fa-at"></i>
+                            <div class="content">
+                                <i class="fas fa-at" id="em"></i>
                             <input type="email" class="email" placeholder="Email">
+                            </div>
+                            
+                            <div class="valid" id="valid-email">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span class="validation"  id="email-valid">Enter a valid email !</span>
+                            </div>
                         </div>
 
                         <div class="load">
-                                <i class="fas fa-lock"></i>
-                                <input type="password" class="password" placeholder="Password">
+                            <div class="content">
+                                <i class="fas fa-lock" id="em"></i>
+                            <input type="password" class="email" placeholder="Password">
+                            </div>
+                            
+                            <div class="valid" id="valid-password">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                <span class="validation"  id="email-valid">Wrong password !</span>
+                            </div>
                         </div>
 
 
@@ -88,7 +102,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- my script -->
     <script>
-       
+
+        const loginButton = $('.login');
+        const validEmail = $('#valid-email');
+        const validPassword = $('#valid-password');
+       $(document).ready(()=>{
+        //    alert("Hello there");
+
+        loginButton.click(()=>{
+            validEmail.addClass("show-valid");
+            validPassword.addClass("show-valid");
+            // alert();
+        });
+    });
+
     </script>
 </body>
 
