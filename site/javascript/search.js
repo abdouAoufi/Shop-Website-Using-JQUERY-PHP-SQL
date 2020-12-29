@@ -1,3 +1,4 @@
+
 var isSearchOpen = false;
 $(document).ready(function () {
 
@@ -14,21 +15,25 @@ $(document).ready(function () {
 });
 document.getElementById("ssearch-cancel").addEventListener("click", function (event) {
     event.preventDefault();
-    let start = document.getElementById("ttarget").value;
-    var params = "name=" + start;
-    var XHR = new XMLHttpRequest();
-    XHR.open("POST", 'backend/php/search.php', true);
-    XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    XHR.onload = function () {
-        let Result = (JSON.parse(this.responseText));
-        $('.product-container').html("");
-        Result.forEach(function (full, index) {
-            displayDataa(full, index);
-        })
-        removeSearch();
+    var text = $("#ttarget").val();
+    var data = {
+        "name": text
+    };
+    $.ajax({
+        url: 'backend/php/search.php',
+        type: "POST",
+        dataType: "json",
+        data: data,
+        success: function (data) {
+            $(".product-container").html("");
+            data.forEach(function (full, index) {
+                displayDataa(full, index);
+            });
+        }
 
-    }
-    XHR.send(params);
+    }).done(function(){
+        removeSearch();
+    })
 });
 
 
@@ -52,14 +57,20 @@ function displayDataa(full, index) {
         event.preventDefault();
         let start = full.id;
         var params = "name=" + start;
-        var XHR = new XMLHttpRequest();
-        XHR.open("POST", 'backend/php/appendhtml.php', true);
-        XHR.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        XHR.onload = function () {
-            let Result = (JSON.parse(this.responseText));
-            appendHtml(Result[0]);
-        }
-        XHR.send(params);
+
+        $.ajax({
+            url: 'backend/php/appendhtml.php',
+            type: "POST",
+            dataType: "json",
+            data: params,
+            success: function (data) {
+                appendHtml(data[0]);
+            }
+
+        }).done(function(){
+
+        })
+
     });
 
 };

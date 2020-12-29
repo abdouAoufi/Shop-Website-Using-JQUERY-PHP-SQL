@@ -1,0 +1,83 @@
+    <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-15%</span>
+                    </div>
+                    <img src="images/p-2.png" alt="">
+                    <strong>Blouse blue</strong>
+                    <h3>9000 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-15%</span>
+                    </div>
+                    <img src="images/p-3.png" alt="">
+                    <strong>Black T</strong>
+                    <h3>34000 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-15%</span>
+                    </div>
+                    <img src="images/p-4.png" alt="">
+                    <strong>Poshet Iphone X</strong>
+                    <h3>34000 DA</h3>
+                </article>
+            </a>
+
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-19%</span>
+                    </div>
+                    <img src="images/p-5.png" alt="">
+                    <strong>Vest blue</strong>
+                    <h3>12000 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-45%</span>
+                    </div>
+                    <img src="images/p-6.png" alt="">
+                    <strong>Vest gine/strong>
+                        <h3>34000 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-39%</span>
+                    </div>
+                    <img src="images/p-7.png" alt="">
+                    <strong>Red jacket</strong>
+                    <h3>34000 DA</h3>
+                </article>
+            </a>
+
+
+            <a href="">
+                <article class="product">
+                    <div class="hd">
+                        <span>-39%</span>
+                    </div>
+                    <img src="images/p-4.png" alt="">
+                    <strong>Red jacket</strong>
+                    <h3>34000 DA</h3>
+                </article>
+            </a>
