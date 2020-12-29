@@ -94,9 +94,10 @@ nav {
   margin-bottom: 2rem;
   font-size: 2rem;
   text-align: center;
+  color: #3F4045;
 }
 
-.container .login-form .load {
+.container .login-form .load .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,10 +108,9 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 0.5rem;
 }
 
-.container .login-form .load i {
+.container .login-form .load #em {
   padding: 0 0.5rem 0 1rem;
   color: #979797;
 }
@@ -123,6 +123,34 @@ nav {
   font-size: 0.9rem;
   font-weight: 500;
   background-color: #EEE;
+}
+
+.container .login-form .load .valid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  place-items: center;
+  max-height: 1rem;
+  margin: .5rem 0;
+  padding-left: .75rem;
+  color: #c75469;
+  visibility: hidden;
+}
+
+.container .login-form .load .valid i {
+  padding-right: .65rem;
+}
+
+.container .login-form .load .valid .validation {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.container .login-form .load .show-valid {
+  visibility: visible;
 }
 
 .container .login-form .login {

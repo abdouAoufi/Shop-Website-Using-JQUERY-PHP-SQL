@@ -1,0 +1,24 @@
+$padding: 0.973rem;
+$borders: 0.9735rem;
+$desktop: 54rem;
+$phone: 480px;
+$tablet: 767px;
+$black: #525252;
+
+@mixin phone {
+    @media (max-width : #{$phone}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width : #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin under-desctop {
+    @media (max-width : #{$desktop}) {
+        @content;
+    }
+}

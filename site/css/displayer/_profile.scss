@@ -1,0 +1,22 @@
+.seller {
+    width: auto;
+    padding: 1rem;
+
+    .seller-container {
+        .basic_info {
+            display: flex;
+            padding : 0 1rem;
+            align-items: center;
+           
+        }
+    }
+}
+.basic_info{
+    .picture-holder{
+        border: 1px solid black;
+    }
+    .info{
+        flex: 2;
+
+    }
+}

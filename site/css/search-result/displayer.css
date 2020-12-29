@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
 
 .displayer {
@@ -241,4 +242,249 @@
 .closee:active {
     opacity: 0.9;
     color: #cb3b3b;
+=======
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital@0;1&display=swap");
+
+.displayer {
+    display: grid;
+    place-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    font-family: "Rubik", sans-serif;
+}
+
+/*
+! POSITION
+! DISPLAY
+! ZINDEX
+! MARGIN
+! PADDING 
+! BORDER
+! SHADOW
+! FONT FAMILY
+! FONT SIZE 
+! BACKGROUND
+*/
+
+.full-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.display-content * {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+.display-content {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    z-index: 7;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    background: #fff;
+}
+
+.product-to-diplay {
+    position: relative;
+    width: 40%;
+    padding: 0.8rem;
+    color: #2d2f3a;
+}
+
+.sp {
+    margin: 0.4rem auto;
+}
+
+.dis-price {
+    color: #ff1f5a;
+    letter-spacing: 1.6px;
+}
+
+
+.dis-category {
+    font-weight: 400;
+}
+
+.dis-date span {
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.dis-details p {
+    position: relative;
+    display: -webkit-box;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    max-lines: 3;
+    -webkit-box-orient: vertical;
+}
+
+.dis-details h5 {
+    font-size: 1rem;
+}
+
+/* ! DISPLAYER */
+
+.displayer {
+    position: fixed;
+}
+
+.dis-profile {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    margin: 1rem auto;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    background: #eee;
+    z-index: 5;
+}
+
+.inner-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+    padding: 0 0.6rem;
+}
+
+.impor {
+    display: flex;
+    justify-content: space-around;
+}
+
+.impor img {
+    margin: auto;
+    clip-path: circle(45% at 50% 50%);
+}
+
+.inner-nav button {
+    height: 30px;
+    border-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(218, 211, 211);
+}
+
+.inner-nav i {
+    font-size: 20px;
+}
+
+.dis-basic-info {
+    display: block;
+    margin: 0.8rem;
+}
+
+.contact {
+    padding: 0.6rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dis-see {
+    display: none;
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0b8457;
+}
+
+.message {
+    width: 40%;
+}
+
+.others {
+    width: 15%;
+}
+
+.contact button {
+    height: 30px;
+    border-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(218, 211, 211);
+}
+
+.contact button:hover {
+    background: rgb(177, 171, 179);
+}
+
+.contact i {
+    font-size: 21px;
+    color: rgb(66, 61, 61);
+}
+
+.pictures-container {
+    position: relative;
+    width: 60%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    border: border;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.image-show {
+    height: 90%;
+    max-width: 420px;
+    cursor: pointer;
+}
+
+.next-image {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    opacity: 0.5;
+}
+
+.change-image {
+    transform: translateY(-50%);
+    padding: 0.4rem 1.4rem;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #0e153a;
+    background-color: #9195a856;
+}
+
+.change-image:hover {
+    background: rgba(34, 34, 34, 0.471);
+}
+
+.pre-image {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    opacity: 0.5;
+}
+
+.closee {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    z-index: 3;
+    opacity: 0.5;
+    font-size: 2.0rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closee:hover,
+.closee:active {
+    opacity: 0.9;
+    color: #cb3b3b;
+>>>>>>> 5bbea3ed7286853d088cd47e52eb92f2eb64509e
 }
