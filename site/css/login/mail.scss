@@ -12,15 +12,15 @@ nav {
 .papa {
     padding: 1rem;
     width: 80%;
-    height: 90vh;
+    height: 80vh;
     font-family: 'poppins';
     display: grid;
     place-items: center;
     margin: auto;
 
     @include media('<tablet') {
-        width: 100%;
-        padding: 0;
+        width: 90%;
+        padding: 1rem;
     }
 
 }
@@ -28,28 +28,24 @@ nav {
 
 .container {
     background-color: #FFF;
-    display: grid;
+    display: flex;
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
     box-shadow: 7px 10px 10px rgba($color: #000000, $alpha: 0.08);
     padding: 4rem 2rem;
-    grid-template-columns: 2fr 1.2fr;
 
-    @include media('>phone', '<=420px') {
-        grid-template-columns: 1fr;
+    @include media('<tablet') {
+        padding: 2rem;
     }
 
-    @include media('<=phone') {
-        grid-template-columns: 1fr;
-        padding: 2rem 0.2rem;
-    }
 
     .image-header {
         margin: auto;
         // width: 55%;
+        // flex: 2;
 
-        @include media('>phone', '<=420px') {
+        @include media('<tablet') {
             display: none;
         }
 

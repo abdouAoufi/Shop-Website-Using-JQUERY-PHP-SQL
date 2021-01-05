@@ -9,7 +9,7 @@ nav {
 .papa {
   padding: 1rem;
   width: 80%;
-  height: 90vh;
+  height: 80vh;
   font-family: 'poppins';
   display: -ms-grid;
   display: grid;
@@ -19,37 +19,27 @@ nav {
 
 @media (max-width: 767px) {
   .papa {
-    width: 100%;
-    padding: 0;
+    width: 90%;
+    padding: 1rem;
   }
 }
 
 .container {
   background-color: #FFF;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
   -webkit-box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.08);
           box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.08);
   padding: 4rem 2rem;
-  -ms-grid-columns: 2fr 1.2fr;
-      grid-template-columns: 2fr 1.2fr;
 }
 
-@media (min-width: 321px) and (max-width: 420px) {
+@media (max-width: 767px) {
   .container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 320px) {
-  .container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    padding: 2rem 0.2rem;
+    padding: 2rem;
   }
 }
 
@@ -57,7 +47,7 @@ nav {
   margin: auto;
 }
 
-@media (min-width: 321px) and (max-width: 420px) {
+@media (max-width: 767px) {
   .container .image-header {
     display: none;
   }
