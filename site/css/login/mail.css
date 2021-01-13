@@ -24,6 +24,13 @@ nav {
   }
 }
 
+@media (max-width: 319px) {
+  .papa {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
 .container {
   background-color: #FFF;
   display: -webkit-box;
@@ -43,17 +50,17 @@ nav {
   }
 }
 
+@media (max-width: 319px) {
+  .container {
+    padding: .5rem;
+  }
+}
+
 .container .image-header {
   margin: auto;
 }
 
 @media (max-width: 767px) {
-  .container .image-header {
-    display: none;
-  }
-}
-
-@media (max-width: 320px) {
   .container .image-header {
     display: none;
   }

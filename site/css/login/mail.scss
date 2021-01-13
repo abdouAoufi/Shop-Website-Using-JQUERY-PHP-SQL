@@ -23,6 +23,12 @@ nav {
         padding: 1rem;
     }
 
+
+    @include media('<phone') {
+        width: 100%;
+        padding: 1rem;
+    }
+
 }
 
 
@@ -39,6 +45,9 @@ nav {
         padding: 1rem;
     }
 
+    @include media('<phone') {
+        padding: .5rem;
+    }
 
     .image-header {
         margin: auto;
@@ -49,9 +58,7 @@ nav {
             display: none;
         }
 
-        @include media('<=phone') {
-            display: none;
-        }
+       
 
         img {
             width: 100%;

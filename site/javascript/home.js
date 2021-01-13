@@ -12,12 +12,12 @@
          console.log((moment(myDate).endOf('day').fromNow()));
          toggle.click(clickToggle);
          closeToggle.click(closeSidebar);
-         $(".sec").click(function (param) {
+         $(".sec").click(() =>  {
            if (isSideBarOpen) {
              closeSidebar();
            }
          });
-         $(".displayer").click(function (param) {
+         $(".displayer").click(() =>  {
            if (isSideBarOpen) {
              closeSidebar();
            }
@@ -26,78 +26,6 @@
          $(".displayer").hide(2400);
        });
 
-       $.ajax({
-         url: "data/data.json",
-         method: "GET",
-         dataType: "json"
-       }).done(displayData);
-
-       function displayData(data) {
-
-         //  $.each(data, display);
-
-         $(".title-product, .img-container ").click(function () {
-           let id = parseInt($(this).children(0).html());
-           displayFull(data[id]);
-         })
-
-         $(".dropdown").click(function name(params) {
-           $(this)
-             .children(2)
-             .fadeIn().delay(2000);
-           $(".dropdown-content").fadeOut(400);
-         });
-       }
-
-       function display(index, dataSet) {
-         $(".section-container").append(`<article class="product" data-name="fuck">
-               <div class="title-product">
-                <p class="data-hold"> ${dataSet.postId} </p>
-                   <h4 href=""> ${dataSet.title} </h4>
-               </div>
-               <div class="img-container">
-                <p class="data-hold"> ${dataSet.postId} </p>
-                   <img src="${dataSet.img[0]}" title="${dataSet.title}"  alt="galaxy" height="200" width="180">
-               </div>
-               <div class="product-price sp">
-                   <p class="price-product">${dataSet.price} <span>DA</span></p>
-                 <p class="priceState"> [ <span>${dataSet.stateSell}</span> ] </p>
-               </div>
-               
-                 <div class="product-price">
-                     <p class="hour-product">${dataSet.hourPost} </p>
-                     <p class="place-product">${dataSet.wilaya}  </p>
-                 </div>
-               <p class="descreption-product"> ${dataSet.descreption}</p>
-               <div class="dropdown">
-
-              <img class="dots" src="images/menu.svg" height=17>
-                       <div class="dropdown-content">
-
-                           <ul>
-                               <li> <i class="fas fa-shopping-bag"></i> <a href="#">Add to bag</a> </li>
-                               <li> <i class="fas fa-thumbs-down"></i><a href="#">Not interested</a></li>
-                               <li> <i class="fas fa-eye-slash"></i> <a href="#">Hide</a></li>
-                               <li> <i class="fas fa-flag"></i> <a href="#">Report</a></li>
-                           </ul>
-
-                       </div>
-               </div>
-           </article>`);
-         $(".priceState").is(function name(params) {
-           // console.log($(this).text());
-           let text = $(this).children(0).text();
-
-           if (text == "negociable") {
-             $(this).children(0).css({
-               color: "green"
-             })
-           }
-           //  );
-
-         })
-
-       }
 
        function clickToggle() {
          isSideBarOpen = true;
@@ -120,7 +48,7 @@
            }
          });
 
-         $('.pre-image').click(function name(params) {
+         $('.pre-image').click(() =>  {
            if (indexImg > 0 || indexImg > 1) {
              --indexImg;
              $(".image-show").attr("src", data.img[indexImg])

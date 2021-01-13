@@ -3,26 +3,27 @@
 @import "include-media";
 
 .feature-heading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 
   h2 {
     font-size: 1.5rem;
-    color: #1b1919;
+    color: $rich_black;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 600;
-    margin-top: 40px;
-    padding: 5px 30px;
-    border: 1px solid #1b1919;
+    margin: 1rem 1.6rem; 
+    // padding: 5px 1.6rem;
+
+    @include media(">phone", "<=tablet") {
+      text-align: center;
+    }
   }
 }
 
 .feature-box {
   .category {
-    width: 90%;
-    margin: 1rem auto;
+    // width: 90%;
+    margin: auto 1.6rem;
     color: $rich_black;
     font-size: 1.2rem;
     position: relative;
