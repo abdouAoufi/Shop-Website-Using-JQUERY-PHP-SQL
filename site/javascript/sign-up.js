@@ -4,11 +4,19 @@ const passwordText = $("#pass");
 const validEmail = $("#email-parent");
 const validPassword = $("#valid-password");
 $(document).ready(() => {
-  loginButton.click(() => {
+  loginButton.click((event) => {
+    event.preventDefault();
     let emailTxt = emailText.val();
     let passTxt = passwordText.val();
-    checkEmailValidatiion(emailTxt);
-    checkPasswordValidatiion(passTxt);
+    let em = checkEmailValidatiion(emailTxt);
+   let ps = checkPasswordValidatiion(passTxt);
+    let data = {
+      email : emailTxt , 
+      password : passTxt 
+    }
+    if(em && ps){
+      callBackEnd(data);
+    }
   });
 });
 
@@ -43,14 +51,39 @@ function checkEmailValidatiion(emailTxt) {
     return;
   } else {
     $("#email-parent").removeClass("show-valid");
+    return true ;
   }
 }
 
 function checkPasswordValidatiion(password) {
-  if (password.length <= 8) {
+  if (password.length < 8) {
     showPasswordwarning(" password is invalid  ");
     return;
   } else {
     $("#password-parent").removeClass("show-valid");
+    return true ;
   }
 }
+
+function callBackEnd(data){
+  $.ajax({
+    url: 'backend/php/login.php',
+    type: "POST",
+    dataType: "json",
+    data: data,
+    success: function (data) {
+        console.log(data);
+        manipulateData(data);
+    }
+  })
+};
+
+function manipulateData(data){
+  if(data.length > 0 ){
+    console.log('You can log in right now ');
+  }
+  else{
+    showPasswordwarning("Your password is incorrect ! ")
+  }
+}
+
