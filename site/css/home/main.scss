@@ -104,6 +104,18 @@ a {
     }
 }
 
+.search-filter{
+    text-align: center;
+  input{
+      display: block;
+  }
+  button{
+      padding: 4px;
+      color: #0b9d8a;
+      background-color: #EEE;
+  }
+}
+
 
 
 .search-bar-active {

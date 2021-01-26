@@ -15,7 +15,7 @@ $(document).ready(function () {
     getDataFromJson();
 
 });
-document.getElementById("ssearch-cancel").addEventListener("click", function (event) {
+/* document.getElementById("ssearch-cancel").addEventListener("click", function (event) {
     event.preventDefault();
     var text = $("#ttarget").val();
     var data = {
@@ -36,6 +36,38 @@ document.getElementById("ssearch-cancel").addEventListener("click", function (ev
     }).done(function(){
         removeSearch();
     })
+}); */
+
+
+document.getElementById("f-search").addEventListener("click", function (event) {
+  event.preventDefault();
+  var text = $("#f-name").val();
+  var wilaya = $("#f-wilaya").val();
+  var low = $("#f-min-price").val();
+  var high = $("#f-max-price").val();
+  console.log(low , high );
+  var data = {
+      "name": text,
+      "wilaya" : wilaya ,
+      "low" : low ,
+      "high" : high ,
+  };
+  $.ajax({
+      url: 'backend/php/search.php',
+      type: "POST",
+      dataType: "json",
+      data: data,
+      success: function (data) {
+          $(".product-container").html("");
+          data.forEach(function (full, index) {
+            // console.log("full data " , data);
+              displayDataa(full, index);
+          });
+      }
+
+  }).done(function(){
+      removeSearch();
+  })
 });
 
 
@@ -58,7 +90,7 @@ function getDataFromJson() {
 
 
 function displayDataa(full, index) {
-  console.log(full);
+  // console.log(full);
     img = JSON.parse(full.img);
     product = `<a href="#">
 <article class="producte-home" id=${full.id} >
@@ -146,7 +178,7 @@ function appendNew(data){
 
         <span class="text importantt" id="pr-wilaya">
           Wilaya :
-          <span>${data.place}</span>
+          <span>${data.place} ${data.wilaya} </span>
           <span id="exact">  </span>
         </span>
 

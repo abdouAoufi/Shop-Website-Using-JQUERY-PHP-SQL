@@ -1204,6 +1204,20 @@ a {
   transition: all ease 0.3s;
 }
 
+.search-filter {
+  text-align: center;
+}
+
+.search-filter input {
+  display: block;
+}
+
+.search-filter button {
+  padding: 4px;
+  color: #0b9d8a;
+  background-color: #EEE;
+}
+
 .search-bar-active {
   display: -webkit-box;
   display: -ms-flexbox;
