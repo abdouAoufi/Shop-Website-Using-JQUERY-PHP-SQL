@@ -47,21 +47,21 @@
                             <input type="email" class="email" placeholder="Email">
                             </div>
                             
-                            <div class="valid" id="valid-email">
+                            <div class="valid" id="email-parent">
                                 <i class="fas fa-exclamation-triangle"></i>
-                                <span class="validation"  id="email-valid">Enter a valid email !</span>
+                                <span class="validation"  id="email-warning"> nothing yet </span>
                             </div>
                         </div>
 
                         <div class="load">
                             <div class="content">
                                 <i class="fas fa-lock" id="em"></i>
-                            <input type="password" class="email" placeholder="Password">
+                            <input type="password" id="pass" class="email" placeholder="Password">
                             </div>
                             
-                            <div class="valid" id="valid-password">
+                            <div class="valid" id="password-parent">
                                 <i class="fas fa-exclamation-triangle"></i>
-                                <span class="validation"  id="email-valid">Wrong password !</span>
+                                <span class="validation"  id="password-warning">nothing yet </span>
                             </div>
                         </div>
 
@@ -88,20 +88,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- my script -->
-    <script>
+    <script src="javascript/sign-up.js">
 
-        const loginButton = $('.login');
-        const validEmail = $('#valid-email');
-        const validPassword = $('#valid-password');
-       $(document).ready(()=>{
-        //    alert("Hello there");
 
-        loginButton.click(()=>{
-            validEmail.addClass("show-valid");
-            validPassword.addClass("show-valid");
-            // alert();
-        });
-    });
 
     </script>
 </body>
