@@ -1,0 +1,49 @@
+.login-form{
+   
+    .input-container{
+        display: block;
+        .row{
+            display: flex;
+        }
+        input {
+            text-transform: capitalize;
+            
+            outline: none;
+            border: 0;
+            height: 2.9rem;
+            padding: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background-color: #EEE;
+            margin: 0.5rem .5rem;
+            border-radius: 8px;
+    
+        }
+       
+     
+    }
+
+    .sign {
+        display: flex;
+        margin: 1.25rem auto;
+        #google-login{
+            background-color: #FE5F55;
+        }
+        input {
+            text-transform: capitalize;
+            width: 80%;
+           margin: auto;
+          text-align: center;
+            height: 2.6rem;
+            border-radius: 1rem;
+            font-size: 1.19rem;
+            font-weight: 500;
+            background-color: #0b9d8a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    }
+ 
+
+}
