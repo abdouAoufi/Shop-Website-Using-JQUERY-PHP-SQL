@@ -1,4 +1,5 @@
 .login-form .input-container {
+  z-index: 3;
   display: block;
 }
 
@@ -32,7 +33,7 @@
   background-color: #FE5F55;
 }
 
-.login-form .sign input {
+.login-form .sign button {
   text-transform: capitalize;
   width: 80%;
   margin: auto;
@@ -45,5 +46,43 @@
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.warn-container {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  max-width: 400px;
+  width: 400px;
+  max-height: 120px;
+  margin: auto auto;
+  padding: .5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  -webkit-box-shadow: -2px 2px 2px 4px rgba(0, 0, 0, 0.286);
+          box-shadow: -2px 2px 2px 4px rgba(0, 0, 0, 0.286);
+}
+
+.warn-container #title-inf {
+  text-align: center;
+  color: #e98a1e;
+  font-weight: 600;
+  display: block;
+  font-size: 1.4rem;
+}
+
+.warn-container #content-info {
+  text-align: center;
+  color: #e75f5f;
+  display: block;
+  font-size: 1.0rem;
+}
+
+.show {
+  visibility: visible;
 }
 /*# sourceMappingURL=main.css.map */

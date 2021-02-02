@@ -29,6 +29,12 @@
 
             </div>
     </nav>
+  
+      <div class="warn-container">
+        <span id="title-inf">Warning information</span>
+        <p id="content-info">please check your information </p>
+      </div>
+   
     <div class="papa login-form">
       <div class="container">
           <div class="image-header">
@@ -38,35 +44,35 @@
           <div class="login-form">
               <strong id="title"> Create your account </strong>
 
-              <form action="#">
+              <form >
                   <div class="input-container">
                    
                     <div class="row">
-                      <input type="text"  placeholder="Name">
-                      <input type="text"   placeholder="family name">
+                      <input id="nameT" type="text"  placeholder="Name">
+                      <input id="familyNameT" type="text"   placeholder="family name">
 
                     </div>
                     <div class="row">
-                      <input  type="text"  placeholder="Country">
-                      <input type="number"  placeholder="Phone number ">
+                      <input  id="emailT" type="text"  placeholder="Email">
+                      <input id="phoneT" type="number"  placeholder="Phone number ">
 
                     </div>
 
                     <div class="row">
-                      <input  type="password"  placeholder="Your password ">
-                      <input type="password"  placeholder="confirm password">
+                      <input  id="passwordT" type="password"  placeholder="Your password ">
+                      <input id="passwordConfirmT"type="password"  placeholder="confirm password">
 
                     </div>
                      
                   
                 </div>
                 <div class="sign">
-                  <input type="submit"  value="sign up ">
+                  <input id="sgnBtn" type="submit"  value="sign up ">
           </div>
 
           <div class="sign">
             <input type="submit"  id="google-login" value="Sign up using Google">
-    </div>
+          </div>
               </form>
 
              
@@ -81,7 +87,11 @@
 </div>
 
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="javascript/validate-sign-up.js">
 
 
+</script>
   </body>
 </html>
