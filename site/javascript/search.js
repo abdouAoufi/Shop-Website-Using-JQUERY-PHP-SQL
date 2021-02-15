@@ -1,19 +1,15 @@
-
 var isSearchOpen = false;
 $(document).ready(function () {
+  $(".search").click(function () {
+    activeSearch();
+  });
+  $(".form").click(function () {
+    if ($(".search-bar").hasClass("search-bar-active")) {
+      removeSearch();
+    }
+  });
 
-
-    $('.search').click(function () {
-        activeSearch();
-    });
-    $('.form').click(function () {
-        if ($('.search-bar').hasClass('search-bar-active')) {
-            removeSearch();
-        }
-    });
-
-    getDataFromJson();
-
+  getDataFromJson();
 });
 /* document.getElementById("ssearch-cancel").addEventListener("click", function (event) {
     event.preventDefault();
@@ -38,61 +34,52 @@ $(document).ready(function () {
     })
 }); */
 
-
 document.getElementById("f-search").addEventListener("click", function (event) {
   event.preventDefault();
   var text = $("#f-name").val();
   var wilaya = $("#f-wilaya").val();
   var low = $("#f-min-price").val();
   var high = $("#f-max-price").val();
-  console.log(low , high );
   var data = {
-      "name": text,
-      "wilaya" : wilaya ,
-      "low" : low ,
-      "high" : high ,
+    name: text,
+    wilaya: wilaya,
+    low: low,
+    high: high,
   };
   $.ajax({
-      url: 'backend/php/search.php',
-      type: "POST",
-      dataType: "json",
-      data: data,
-      success: function (data) {
-          $(".product-container").html("");
-          data.forEach(function (full, index) {
-            // console.log("full data " , data);
-              displayDataa(full, index);
-          });
-      }
-
-  }).done(function(){
-      removeSearch();
-  })
+    url: "backend/php/search.php",
+    type: "POST",
+    dataType: "json",
+    data: data,
+    success: function (data) {
+      clearPage();
+      data.forEach(function (full, index) {
+        // console.log("full data " , data);
+        displayDataa(full, index);
+      });
+    },
+  }).done(function () {
+    removeSearch();
+  });
 });
-
-
 
 function getDataFromJson() {
   $.ajax({
-      method: 'GET',
-      url: "backend/php/random.php",
-      dataType: "json",
-      success : function(data , index){
-        data.forEach(function(item , index){
-          displayDataa(item , index);
-        })
-          
-      }
-  }).done(function (data) {
-
-  })
+    method: "GET",
+    url: "backend/php/random.php",
+    dataType: "json",
+    success: function (data, index) {
+      data.forEach(function (item, index) {
+        displayDataa(item, index);
+      });
+    },
+  }).done(function (data) {});
 }
-
 
 function displayDataa(full, index) {
   // console.log(full);
-    img = JSON.parse(full.img);
-    product = `<a href="#">
+  img = JSON.parse(full.img);
+  product = `<a href="#">
 <article class="producte-home" id=${full.id} >
 
 <div class="hd">
@@ -105,64 +92,61 @@ function displayDataa(full, index) {
 </div>
 </article>
 </a>`;
-    $('.product-container').append(product);
-    $(`#${full.id}`).click(function (event) {
-        event.preventDefault();
-        let start = full.id;
-        var params = "name=" + start;
+  $(".product-container").append(product);
+  $(`#${full.id}`).click(function (event) {
+    event.preventDefault();
+    let start = full.id;
+    var params = "name=" + start;
 
-        $.ajax({
-            url: 'backend/php/appendhtml.php',
-            type: "POST",
-            dataType: "json",
-            data: params,
-            success: function (data) {
-                appendNew(data[0]);
-            }
-
-        }).done(function(){
-
-        })
-    });
-};
+    $.ajax({
+      url: "backend/php/appendhtml.php",
+      type: "POST",
+      dataType: "json",
+      data: params,
+      success: function (data) {
+        appendNew(data[0]);
+      },
+    }).done(function () {});
+  });
+}
 
 function showImage() {
-    $(".product-to-diplay ").hide();
-    $(' .pictures-container').css({
-        display: 'grid'
-    });
-    isPictureDisplayerOpen = !isPictureDisplayerOpen;
+  $(".product-to-diplay ").hide();
+  $(" .pictures-container").css({
+    display: "grid",
+  });
+  isPictureDisplayerOpen = !isPictureDisplayerOpen;
 }
 
 function hideImage() {
-    $(".product-to-diplay ").show();
-    $(' .pictures-container').css({
-        display: 'none'
-    });
-    isPictureDisplayerOpen = !isPictureDisplayerOpen;
+  $(".product-to-diplay ").show();
+  $(" .pictures-container").css({
+    display: "none",
+  });
+  isPictureDisplayerOpen = !isPictureDisplayerOpen;
 }
 
 function hideFull() {
-    $('.form').empty();
-    $(".form").removeClass("form-only");
+  $(".form").empty();
+  $(".form").removeClass("form-only");
 }
 
 function activeSearch() {
-    isSearchOpen = true;
-    $('.search-bar').addClass('search-bar-active');
-    $('.form').addClass('form-only');
+  isSearchOpen = true;
+  $(".search-bar").addClass("search-bar-active");
+  $(".form").addClass("form-only");
 }
 
 function removeSearch() {
-    isSearchOpen = false;
-    $('.search-bar').removeClass('search-bar-active');
-    $('.form').removeClass('form-only');
+  isSearchOpen = false;
+  $(".search-bar").removeClass("search-bar-active");
+  $(".form").removeClass("form-only");
 }
 
-function appendNew(data){
+function appendNew(data) {
   let img = JSON.parse(data.img);
   let profile = JSON.parse(data.profile);
-    let element = `
+  let element = `
 
     <div class="big-container">
       <div class="close-fun" id="clox">
@@ -257,9 +241,14 @@ function appendNew(data){
     </div>
 
     `;
-    $('.form').append(element);
-    $('.form').addClass('form-only');
-    $("#clox").click(function () {
-          hideFull();
+  $(".form").append(element);
+  $(".form").addClass("form-only");
+  $("#clox").click(function () {
+    hideFull();
   });
+}
+
+function clearPage() {
+  $(".product-container").html("");
+  $(".full-slider-box").hide();
 }
