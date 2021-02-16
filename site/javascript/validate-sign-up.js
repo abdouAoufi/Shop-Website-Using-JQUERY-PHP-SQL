@@ -14,6 +14,7 @@ let validationPassMatch = false ;
 let validationEmail = false ; 
 
 $(document).ready(function(){
+  // alert('hello world')
   $('#sgnBtn').click(function(){
     setVariables(); 
     checkLength();

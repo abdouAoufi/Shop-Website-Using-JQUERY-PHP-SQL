@@ -1,4 +1,5 @@
 var isSearchOpen = false;
+const logo = $(".logo");
 $(document).ready(function () {
   $(".search").click(function () {
     activeSearch();
@@ -8,31 +9,14 @@ $(document).ready(function () {
       removeSearch();
     }
   });
-
-  getDataFromJson();
+  getDataHome();
 });
-/* document.getElementById("ssearch-cancel").addEventListener("click", function (event) {
-    event.preventDefault();
-    var text = $("#ttarget").val();
-    var data = {
-        "name": text
-    };
-    $.ajax({
-        url: 'backend/php/search.php',
-        type: "POST",
-        dataType: "json",
-        data: data,
-        success: function (data) {
-            $(".product-container").html("");
-            data.forEach(function (full, index) {
-                displayDataa(full, index);
-            });
-        }
 
-    }).done(function(){
-        removeSearch();
-    })
-}); */
+logo.click(function () {
+  clearPage();
+  $(".full-slider-box").show();
+  getDataHome();
+});
 
 document.getElementById("f-search").addEventListener("click", function (event) {
   event.preventDefault();
@@ -63,7 +47,7 @@ document.getElementById("f-search").addEventListener("click", function (event) {
   });
 });
 
-function getDataFromJson() {
+function getDataHome() {
   $.ajax({
     method: "GET",
     url: "backend/php/random.php",

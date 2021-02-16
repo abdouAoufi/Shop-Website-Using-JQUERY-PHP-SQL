@@ -12,19 +12,25 @@ if (isset($_POST['name'])) {
     // $query =  "SELECT * FROM adshop.phones WHERE title REGEXP '$nameFilter' AND wilaya REGEXP '$wilayaFilter' ";
 
     if($low > 0 && $high > 0) {
-        $query =  "SELECT * FROM adshop.phones
+  ;
+        $query =  "SELECT * FROM adshop.phones p
+        JOIN adshop.users u 
+        ON p.id_relate = u.id_relate
         WHERE
-        title REGEXP '$nameFilter' 
+        p.title REGEXP '$nameFilter' 
         AND 
-        wilaya REGEXP '$wilayaFilter'  
-        AND price BETWEEN '$low' AND '$high' ";
-    }else{
-        $query =  "SELECT * FROM adshop.phones
-        WHERE
-        title REGEXP '$nameFilter' 
-        AND 
-        wilaya REGEXP '$wilayaFilter'  
+        p.wilaya REGEXP '$wilayaFilter'  
+        AND p.price BETWEEN '$low' AND '$high' 
         ";
+    }else{
+        $query =  "SELECT * FROM adshop.phones p 
+        JOIN adshop.users u 
+        ON p.id_relate = u.id_relate
+        WHERE
+        p.title REGEXP '$nameFilter' 
+        AND 
+        p.wilaya REGEXP '$wilayaFilter'  
+     ";
     }
 
 
