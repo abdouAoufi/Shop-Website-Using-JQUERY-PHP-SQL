@@ -1,89 +1,79 @@
-.login-form{
-   
-   
-    .input-container{
-        z-index: 3;
-        display: block;
-        .row{
-            display: flex;
-        }
-        input {
-            text-transform: capitalize;
-            
-            outline: none;
-            border: 0;
-            height: 2.9rem;
-            padding: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            background-color: #EEE;
-            margin: 0.5rem .5rem;
-            border-radius: 8px;
-    
-        }
-       
-     
-    }
+.input-container {
+  z-index: 1;
+  display: block;
+  .row {
+    display: flex;
+  }
+  input {
+    text-transform: capitalize;
 
-    .sign {
-        display: flex;
-        margin: 1.25rem auto;
-        #google-login{
-            background-color: #FE5F55;
-        }
-        button {
-            text-transform: capitalize;
-            width: 80%;
-           margin: auto;
-          text-align: center;
-            height: 2.6rem;
-            border-radius: 1rem;
-            font-size: 1.19rem;
-            font-weight: 500;
-            background-color: #0b9d8a;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-    }
- 
-
+    outline: none;
+    border: 0;
+    height: 2.9rem;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: #eee;
+    margin: 0.5rem 0.5rem;
+    border-radius: 8px;
+  }
 }
 
-    
- 
-    .warn-container{
-        z-index: 3;
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        display: none;
-        max-width: 400px;
-        width: 400px;
-        max-height: 120px;
-        margin: auto auto;
-        padding: .5rem;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: -2px 2px 2px 4px rgba(0, 0, 0, 0.286);
-        #title-inf{
-            text-align: center;
-            color: #e98a1e;
-            font-weight: 600;
-            display: block;
-            font-size: 1.4rem;
-        }
-        #content-info{
-            text-align: center;
-            color: #e75f5f;
-            display: block;
-            font-size: 1.0rem;
-        }
-      
-    }
-    .show{
-        visibility : visible;
-    }
+.sign {
+  display: flex;
+  margin: 1.25rem auto;
+  #google-login {
+    background-color: #fe5f55;
+  }
+}
 
+.show {
+  visibility: visible;
+}
+
+button {
+  text-transform: capitalize;
+  width: 12rem;
+  margin: auto ;
+  padding: .5rem;
+  text-align: center;
+  height: 2.6rem;
+  border-radius: 1rem;
+  font-size: 1.19rem;
+  font-weight: 500;
+  background-color: #0b9d8a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.warn-container {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  max-width: 400px;
+  width: 400px;
+  max-height: 120px;
+  margin: auto auto;
+  padding: 0.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: -2px 2px 2px 4px rgba(0, 0, 0, 0.286);
+  #title-inf {
+    text-align: center;
+    color: #e98a1e;
+    font-weight: 600;
+    display: block;
+    font-size: 1.4rem;
+  }
+  #content-info {
+    text-align: center;
+    color: #e75f5f;
+    display: block;
+    font-size: 1rem;
+  }
+}

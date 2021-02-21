@@ -1,15 +1,15 @@
-.login-form .input-container {
-  z-index: 3;
+.input-container {
+  z-index: 1;
   display: block;
 }
 
-.login-form .input-container .row {
+.input-container .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.login-form .input-container input {
+.input-container input {
   text-transform: capitalize;
   outline: none;
   border: 0;
@@ -17,26 +17,31 @@
   padding: 0.5rem;
   font-size: 0.9rem;
   font-weight: 500;
-  background-color: #EEE;
-  margin: 0.5rem .5rem;
+  background-color: #eee;
+  margin: 0.5rem 0.5rem;
   border-radius: 8px;
 }
 
-.login-form .sign {
+.sign {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 1.25rem auto;
 }
 
-.login-form .sign #google-login {
-  background-color: #FE5F55;
+.sign #google-login {
+  background-color: #fe5f55;
 }
 
-.login-form .sign button {
+.show {
+  visibility: visible;
+}
+
+button {
   text-transform: capitalize;
-  width: 80%;
+  width: 12rem;
   margin: auto;
+  padding: .5rem;
   text-align: center;
   height: 2.6rem;
   border-radius: 1rem;
@@ -60,7 +65,7 @@
   width: 400px;
   max-height: 120px;
   margin: auto auto;
-  padding: .5rem;
+  padding: 0.5rem;
   background-color: #fff;
   border-radius: 8px;
   -webkit-box-shadow: -2px 2px 2px 4px rgba(0, 0, 0, 0.286);
@@ -79,10 +84,6 @@
   text-align: center;
   color: #e75f5f;
   display: block;
-  font-size: 1.0rem;
-}
-
-.show {
-  visibility: visible;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

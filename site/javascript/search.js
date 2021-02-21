@@ -61,15 +61,15 @@ function getDataHome() {
 }
 
 function displayDataa(full, index) {
-  // console.log(full);
-  img = JSON.parse(full.img);
+  console.log(full);
+  // img = JSON.parse(full.img);
   product = `<a href="#">
 <article class="producte-home" id=${full.id} >
 
 <div class="hd">
 <span>-14%</span>
 </div>
-<img src="${img[0]}" alt="product">
+<img src="${full.img1}" alt="product">
 <div class="info">
 <h6>${full.title}</h6>
 <strong>${full.price} DA</strong>
@@ -128,8 +128,8 @@ function removeSearch() {
 }
 
 function appendNew(data) {
-  let img = JSON.parse(data.img);
-  let profile = JSON.parse(data.profile);
+ 
+  
   let element = `
 
     <div class="big-container">
@@ -180,7 +180,7 @@ function appendNew(data) {
         <div class="seller-container">
           <div class="first-row">
             <div class="profile-pic">
-              <img src="${img[0]}" alt="" height="60" />
+              <img src="${data.img1}" alt="" height="60" />
             </div>
             <div class="info-basic">
               <span id="name-pr" class="text"> Sara Aoufi </span>
@@ -216,12 +216,13 @@ function appendNew(data) {
           <i class="fas fa-chevron-left"></i>
         </div>
 
-        <img src="${img[0]}" alt="" srcset="" />
+        <img src="${data.img1}" alt="" srcset="" />
 
         <div class="next mod">
           <i class="fas fa-chevron-right"></i>
         </div>
       </div>
+      
     </div>
 
     `;
