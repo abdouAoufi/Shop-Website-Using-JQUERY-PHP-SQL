@@ -1,6 +1,6 @@
 var isSearchOpen = false;
 const logo = $(".logo");
-$(document).ready(function () {
+$(document).ready(function (event) {
   $(".search").click(function () {
     activeSearch();
   });
@@ -10,12 +10,14 @@ $(document).ready(function () {
     }
   });
   getDataHome();
+  getDataHome();
 });
 
 logo.click(function () {
   clearPage();
   $(".full-slider-box").show();
   getDataHome();
+  // getDataHome();
 });
 
 document.getElementById("f-search").addEventListener("click", function (event) {
@@ -46,38 +48,47 @@ document.getElementById("f-search").addEventListener("click", function (event) {
   });
 });
 
+let pC = $("<div class='product-container' > </div>");
+let holder = $("<div class='categoryy'> </div>");
 function getDataHome() {
   $.ajax({
     method: "GET",
     url: "backend/php/random.php",
     dataType: "json",
     success: function (data) {
-      // console.log("this is random data " , data);
       data.forEach(function (item) {
         displayDataa(item);
       });
     },
-  }).done(function (data) {});
+  }).done(function (data) {
+    let title = `<h4>Smart phones </h4>`;
+    holder.append(title);
+    $(".feature-box").append(holder);
+  });
 }
 
 function displayDataa(full) {
   product = `<a href="#">
-<article class="producte-home" id=${full.id} >
+      <article class="producte-home" id=${full.id} >
+      <div class="hd">
+      <span>-14%</span>
+      </div>
+      <img src="${full.img1}" alt="product">
+      <div class="info">
+      <h6>${full.title}</h6>
+      <strong>${full.price} DA</strong>
+      </div>
+      </article>
+      </a>`;
+  pC.append(product);
+  holder.append(pC);
+  eventHandler(full.id);
+}
 
-<div class="hd">
-<span>-14%</span>
-</div>
-<img src="${full.img1}" alt="product">
-<div class="info">
-<h6>${full.title}</h6>
-<strong>${full.price} DA</strong>
-</div>
-</article>
-</a>`;
-  $(".product-container").append(product);
-  $(`#${full.id}`).click(function (event) {
+function eventHandler(id) {
+  $(`#${id}`).click(function (event) {
     event.preventDefault();
-    let start = full.id;
+    let start = id;
     var params = "name=" + start;
     $.ajax({
       url: "backend/php/appendhtml.php",

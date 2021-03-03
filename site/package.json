@@ -1,0 +1,17 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "this is my main web site",
+  "main": "javascript/home.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "main"
+  ],
+  "author": "abdou dv",
+  "license": "ISC",
+  "dependencies": {
+   
+  }
+}

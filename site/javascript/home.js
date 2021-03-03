@@ -44,16 +44,16 @@
          $('.next-image').click(function name(params) {
            if (indexImg < data.img.length - 1) {
              ++indexImg;
-             $(".image-show").attr("src", data.img[indexImg])
+             $(".image-show").attr("src", data.img[indexImg]);
            }
          });
 
          $('.pre-image').click(() =>  {
            if (indexImg > 0 || indexImg > 1) {
              --indexImg;
-             $(".image-show").attr("src", data.img[indexImg])
+             $(".image-show").attr("src", data.img[indexImg]);
            }
-         })
+         });
          $(".closee").click(function clickedProduct(params) {
            if (isPictureDisplayerOpen) {
              hideImage();
