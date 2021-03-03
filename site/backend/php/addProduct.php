@@ -2,7 +2,7 @@
 
 // save data in SQL 
 $conn = mysqli_connect('127.0.0.1', 'root', '', "adshop"); // ! ETABLISH CONNEXION WITH THE SERVER 
-
+$isCAR = false ; 
 // check for GET varaible 
 if (isset($_POST['Title'])) {
           $Title  =  $_POST['Title'] ;
@@ -20,10 +20,16 @@ if (isset($_POST['Title'])) {
           $Descreption=  $_POST['Descreption'] ;
           $IdRelete=  $_POST['IdRelete'] ;
           $Price=  $_POST['Price'] ;
+          $isCarBool=  $_POST['isCarBool'] ;
           $images = [$Img , $Img2 , $Img3];
-          
+
+          $tableName = "adshop.phones";
+          $isCAR = $isCarBool ; 
+          if( $isCAR == "true" ){
+            $tableName = "adshop.cars"; 
+          }
           $query = 
-            "INSERT INTO adshop.phones 
+            "INSERT INTO $tableName
             (hourPost,
             category,
             img1,

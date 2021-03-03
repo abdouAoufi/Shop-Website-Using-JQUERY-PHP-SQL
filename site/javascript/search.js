@@ -37,9 +37,8 @@ document.getElementById("f-search").addEventListener("click", function (event) {
     data: data,
     success: function (data) {
       clearPage();
-      data.forEach(function (full, index) {
-        // console.log("full data " , data);
-        displayDataa(full, index);
+      data.forEach(function (full) {
+        displayDataa(full);
       });
     },
   }).done(function () {
@@ -52,17 +51,16 @@ function getDataHome() {
     method: "GET",
     url: "backend/php/random.php",
     dataType: "json",
-    success: function (data, index) {
-      data.forEach(function (item, index) {
-        displayDataa(item, index);
+    success: function (data) {
+      // console.log("this is random data " , data);
+      data.forEach(function (item) {
+        displayDataa(item);
       });
     },
   }).done(function (data) {});
 }
 
-function displayDataa(full, index) {
-  console.log(full);
-  // img = JSON.parse(full.img);
+function displayDataa(full) {
   product = `<a href="#">
 <article class="producte-home" id=${full.id} >
 
@@ -81,7 +79,6 @@ function displayDataa(full, index) {
     event.preventDefault();
     let start = full.id;
     var params = "name=" + start;
-
     $.ajax({
       url: "backend/php/appendhtml.php",
       type: "POST",
@@ -128,8 +125,6 @@ function removeSearch() {
 }
 
 function appendNew(data) {
- 
-  
   let element = `
 
     <div class="big-container">

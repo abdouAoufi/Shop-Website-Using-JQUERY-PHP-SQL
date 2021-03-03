@@ -24,15 +24,14 @@ if (isset($_POST['name'])) {
         ";
     }else{
         $query =  "SELECT * FROM adshop.phones p 
-        JOIN adshop.users u 
-        ON p.id_relate = u.id_relate
+        #JOIN adshop.users u 
+        #ON p.id_relate = u.id_relate
         WHERE
         p.title REGEXP '$nameFilter' 
         AND 
         p.wilaya REGEXP '$wilayaFilter'  
      ";
     }
-
 
     if (mysqli_query($conn, $query)) {
         $resultQuery = mysqli_query($conn, $query);
