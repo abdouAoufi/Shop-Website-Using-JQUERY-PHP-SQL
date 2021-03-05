@@ -10,14 +10,12 @@ $(document).ready(function (event) {
     }
   });
   getDataHome();
-  getDataHome();
 });
 
 logo.click(function () {
   clearPage();
   $(".full-slider-box").show();
   getDataHome();
-  // getDataHome();
 });
 
 document.getElementById("f-search").addEventListener("click", function (event) {
@@ -48,8 +46,6 @@ document.getElementById("f-search").addEventListener("click", function (event) {
   });
 });
 
-let pC = $("<div class='product-container' > </div>");
-let holder = $("<div class='categoryy'> </div>");
 function getDataHome() {
   $.ajax({
     method: "GET",
@@ -62,13 +58,12 @@ function getDataHome() {
     },
   }).done(function (data) {
     let title = `<h4>Smart phones </h4>`;
-    holder.append(title);
-    $(".feature-box").append(holder);
+    $(".categoryy").append(title);
   });
 }
 
 function displayDataa(full) {
-  product = `<a href="#">
+  product = ` <a href="#">
       <article class="producte-home" id=${full.id} >
       <div class="hd">
       <span>-14%</span>
@@ -79,9 +74,8 @@ function displayDataa(full) {
       <strong>${full.price} DA</strong>
       </div>
       </article>
-      </a>`;
-  pC.append(product);
-  holder.append(pC);
+      </a> `;
+  $(".product-container").append(product);
   eventHandler(full.id);
 }
 
@@ -137,7 +131,6 @@ function removeSearch() {
 
 function appendNew(data) {
   let element = `
-
     <div class="big-container">
       <div class="close-fun" id="clox">
         <i class="fas fa-times"></i>
