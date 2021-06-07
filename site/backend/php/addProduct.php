@@ -62,4 +62,5 @@ if (isset($_POST['Title'])) {
             $PostId , 
             '$IdRelete')";
 mysqli_query($conn, $query);
+
 }

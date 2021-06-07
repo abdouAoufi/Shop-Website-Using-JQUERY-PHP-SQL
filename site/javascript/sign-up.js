@@ -4,7 +4,6 @@ const loginBtn = $("#loginBtn");
 
 let email, password;
 $(document).ready(function () {
-  // alert("hellow ")
   loginBtn.click(function () {
     setVariables();
     if (checkEmailValidation(email) == true) {
